@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+backend/.env
+backend/*.db
+
+# Trained models and datasets (large / may contain participant data)
+backend/trained_models/*.keras
+backend/trained_models/*.meta.json
+ml/data/**
+!ml/data/README.md
+!ml/data/templates/**
+ml/results/
+ml/models/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/public/mediapipe/
+frontend/.env.local
+*.tsbuildinfo
+
+# Raw downloaded source datasets (re-download; see backend/app/data/README.md)
+data_sources/

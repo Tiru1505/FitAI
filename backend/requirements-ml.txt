@@ -1,0 +1,2 @@
+# Optional: install to let the API load trained BiLSTM/GRU models from trained_models/.
+tensorflow>=2.15

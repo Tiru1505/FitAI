@@ -1,0 +1,148 @@
+food_id,food_name,serving_size,calories,protein_g,carbohydrates_g,fat_g,fiber_g,allergens,dietary_tags,meal_category,serving_grams,fdc_id,usda_description,source
+1,Rolled oats (dry),1 cup (81 g),307,10.7,54.8,5.3,8.2,,vegan|vegetarian,breakfast,81.0,173904,"Cereals, oats, regular and quick, not fortified, dry",USDA FoodData Central SR Legacy 2018-04
+2,"Oatmeal, cooked with water",1 cup (234 g),166,5.9,28.1,3.6,4.0,,vegan|vegetarian,breakfast,234.0,173905,"Cereals, oats, regular and quick, unenriched, cooked with water (includes boiling and microwaving), without salt",USDA FoodData Central SR Legacy 2018-04
+3,"Granola, homemade",1 cup (122 g),597,16.7,65.7,29.7,10.9,tree_nuts,vegetarian,breakfast,122.0,171646,"Cereals ready-to-eat, granola, homemade",USDA FoodData Central SR Legacy 2018-04
+4,"Buckwheat groats, cooked",1 cup (168 g),155,5.7,33.5,1.0,4.5,,vegan|vegetarian|gluten_free,breakfast,168.0,170686,"Buckwheat groats, roasted, cooked",USDA FoodData Central SR Legacy 2018-04
+5,Whole-wheat bread,1 slice (32 g),81,4.0,13.7,1.1,1.9,wheat,vegan|vegetarian,breakfast,32.0,172688,"Bread, whole-wheat, commercially prepared",USDA FoodData Central SR Legacy 2018-04
+6,Multi-grain bread,1 slice regular (26 g),69,3.5,11.3,1.1,1.9,wheat,vegan|vegetarian,breakfast,26.0,168013,"Bread, multi-grain (includes whole-grain)",USDA FoodData Central SR Legacy 2018-04
+7,White bread,1 slice (29 g),77,2.6,14.3,1.0,0.8,wheat,vegan|vegetarian,breakfast,29.0,174924,"Bread, white, commercially prepared (includes soft bread crumbs)",USDA FoodData Central SR Legacy 2018-04
+8,"Greek yogurt, plain, nonfat",1 container (170 g),100,17.3,6.1,0.7,0.0,milk,vegetarian|gluten_free,breakfast,170.0,170894,"Yogurt, Greek, plain, nonfat (Includes foods for USDA's Food Distribution Program)",USDA FoodData Central SR Legacy 2018-04
+9,"Greek yogurt, plain, low-fat",1 container (7 oz) (200 g),146,19.9,7.9,3.8,0.0,milk,vegetarian|gluten_free,breakfast,200.0,170903,"Yogurt, Greek, plain, lowfat",USDA FoodData Central SR Legacy 2018-04
+10,"Yogurt (curd), plain, low-fat",1 container (6 oz) (170 g),107,8.9,12.0,2.6,0.0,milk,vegetarian|gluten_free,breakfast,170.0,170886,"Yogurt, plain, low fat",USDA FoodData Central SR Legacy 2018-04
+11,"Milk, low-fat 1%",1 cup (244 g),102,8.2,12.2,2.4,0.0,milk,vegetarian|gluten_free,breakfast,244.0,170872,"Milk, lowfat, fluid, 1% milkfat, with added vitamin A and vitamin D",USDA FoodData Central SR Legacy 2018-04
+12,"Milk, whole",1 cup (244 g),149,7.7,11.7,7.9,0.0,milk,vegetarian|gluten_free,breakfast,244.0,171265,"Milk, whole, 3.25% milkfat, with added vitamin D",USDA FoodData Central SR Legacy 2018-04
+13,"Soy milk, calcium-fortified",1 cup (243 g),104,6.3,12.0,3.6,0.5,soy,vegan|vegetarian|gluten_free,breakfast,243.0,172456,"Soymilk, original and vanilla, with added calcium, vitamins A and D",USDA FoodData Central SR Legacy 2018-04
+14,"Almond milk, unsweetened",1 cup (262 g),39,1.0,3.4,2.5,0.5,tree_nuts,vegan|vegetarian|gluten_free,breakfast,262.0,174832,"Beverages, almond milk, unsweetened, shelf stable",USDA FoodData Central SR Legacy 2018-04
+15,"Egg, hard-boiled",1 large (50 g),78,6.3,0.6,5.3,0.0,egg,vegetarian|gluten_free,breakfast,50.0,173424,"Egg, whole, cooked, hard-boiled",USDA FoodData Central SR Legacy 2018-04
+16,"Egg, scrambled",1 large (61 g),91,6.1,1.0,6.7,0.0,egg|milk,vegetarian|gluten_free,breakfast,61.0,172187,"Egg, whole, cooked, scrambled",USDA FoodData Central SR Legacy 2018-04
+17,"Egg, poached",1 large (50 g),72,6.3,0.4,4.7,0.0,egg,vegetarian|gluten_free,breakfast,50.0,172186,"Egg, whole, cooked, poached",USDA FoodData Central SR Legacy 2018-04
+18,Egg white,1 large (33 g),17,3.6,0.2,0.1,0.0,egg,vegetarian|gluten_free,breakfast,33.0,172183,"Egg, white, raw, fresh",USDA FoodData Central SR Legacy 2018-04
+19,Chia seeds,1 oz (28 g),138,4.7,11.9,8.7,9.8,,vegan|vegetarian|gluten_free,breakfast,28.4,170554,"Seeds, chia seeds, dried",USDA FoodData Central SR Legacy 2018-04
+20,Flaxseeds,"1 tbsp, whole (10 g)",55,1.9,3.0,4.3,2.8,,vegan|vegetarian|gluten_free,breakfast,10.3,169414,"Seeds, flaxseed",USDA FoodData Central SR Legacy 2018-04
+21,Honey,1 tbsp (21 g),64,0.1,17.3,0.0,0.0,,vegetarian|gluten_free,breakfast,21.0,169640,Honey,USDA FoodData Central SR Legacy 2018-04
+22,Jam,1 tbsp (20 g),56,0.1,13.8,0.0,0.2,,vegan|vegetarian|gluten_free,breakfast,20.0,169641,Jams and preserves,USDA FoodData Central SR Legacy 2018-04
+23,"Coffee, black",1 cup (8 fl oz) (237 g),2,0.3,0.0,0.0,0.0,,vegan|vegetarian|gluten_free,breakfast,237.0,171890,"Beverages, coffee, brewed, prepared with tap water",USDA FoodData Central SR Legacy 2018-04
+24,"Tea, black, unsweetened",1 cup (8 fl oz) (237 g),2,0.0,0.7,0.0,0.0,,vegan|vegetarian|gluten_free,breakfast,237.0,173227,"Beverages, tea, black, brewed, prepared with tap water",USDA FoodData Central SR Legacy 2018-04
+25,"Orange juice, fresh",1 cup (248 g),112,1.7,25.8,0.5,0.5,,vegan|vegetarian|gluten_free,breakfast,248.0,169098,"Orange juice, raw (Includes foods for USDA's Food Distribution Program)",USDA FoodData Central SR Legacy 2018-04
+26,"Corn grits, cooked",1 cup (257 g),182,4.4,37.9,1.2,2.1,,vegan|vegetarian|gluten_free,breakfast,257.0,171655,"Cereals, corn grits, white, regular and quick, enriched, cooked with water, without salt",USDA FoodData Central SR Legacy 2018-04
+27,"Semolina (sooji), dry",1 cup (167 g),601,21.2,121.6,1.8,6.5,wheat,vegan|vegetarian,breakfast,167.0,169715,"Semolina, enriched",USDA FoodData Central SR Legacy 2018-04
+28,Banana,"1 medium (7"" to 7-7/8"" long) (118 g)",105,1.3,27.0,0.4,3.1,,vegan|vegetarian|gluten_free,snack,118.0,173944,"Bananas, raw",USDA FoodData Central SR Legacy 2018-04
+29,"Apple, with skin","1 medium (3"" dia) (182 g)",95,0.5,25.1,0.3,4.4,,vegan|vegetarian|gluten_free,snack,182.0,171688,"Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)",USDA FoodData Central SR Legacy 2018-04
+30,Orange,"1 large (3-1/16"" dia) (184 g)",86,1.7,21.6,0.2,4.4,,vegan|vegetarian|gluten_free,snack,184.0,169097,"Oranges, raw, all commercial varieties",USDA FoodData Central SR Legacy 2018-04
+31,Blueberries,1 cup (148 g),84,1.1,21.4,0.5,3.6,,vegan|vegetarian|gluten_free,breakfast,148.0,171711,"Blueberries, raw",USDA FoodData Central SR Legacy 2018-04
+32,Strawberries,"1 cup, halves (152 g)",49,1.0,11.7,0.5,3.0,,vegan|vegetarian|gluten_free,breakfast,152.0,167762,"Strawberries, raw",USDA FoodData Central SR Legacy 2018-04
+33,Raspberries,1 cup (123 g),64,1.5,14.7,0.8,8.0,,vegan|vegetarian|gluten_free,snack,123.0,167755,"Raspberries, raw",USDA FoodData Central SR Legacy 2018-04
+34,Grapes,1 cup (151 g),104,1.1,27.3,0.2,1.4,,vegan|vegetarian|gluten_free,snack,151.0,174683,"Grapes, red or green (European type, such as Thompson seedless), raw",USDA FoodData Central SR Legacy 2018-04
+35,Mango,1 cup pieces (165 g),99,1.4,24.7,0.6,2.6,,vegan|vegetarian|gluten_free,snack,165.0,169910,"Mangos, raw",USDA FoodData Central SR Legacy 2018-04
+36,Papaya,"1 cup 1"" pieces (145 g)",62,0.7,15.7,0.4,2.5,,vegan|vegetarian|gluten_free,breakfast,145.0,169926,"Papayas, raw",USDA FoodData Central SR Legacy 2018-04
+37,Pineapple,"1 cup, chunks (165 g)",82,0.9,21.6,0.2,2.3,,vegan|vegetarian|gluten_free,snack,165.0,169124,"Pineapple, raw, all varieties",USDA FoodData Central SR Legacy 2018-04
+38,Watermelon,"1 cup, balls (154 g)",46,0.9,11.6,0.2,0.6,,vegan|vegetarian|gluten_free,snack,154.0,167765,"Watermelon, raw",USDA FoodData Central SR Legacy 2018-04
+39,Cantaloupe,"1 cup, balls (177 g)",60,1.5,14.4,0.3,1.6,,vegan|vegetarian|gluten_free,snack,177.0,169092,"Melons, cantaloupe, raw",USDA FoodData Central SR Legacy 2018-04
+40,Guava,"1 fruit, without refuse (55 g)",37,1.4,7.9,0.5,3.0,,vegan|vegetarian|gluten_free,snack,55.0,173044,"Guavas, common, raw",USDA FoodData Central SR Legacy 2018-04
+41,Pomegranate arils,1/2 cup arils (seed/juice sacs) (87 g),72,1.5,16.3,1.0,3.5,,vegan|vegetarian|gluten_free,snack,87.0,169134,"Pomegranates, raw",USDA FoodData Central SR Legacy 2018-04
+42,Pear,1 medium (178 g),101,0.6,27.1,0.2,5.5,,vegan|vegetarian|gluten_free,snack,178.0,169118,"Pears, raw",USDA FoodData Central SR Legacy 2018-04
+43,Kiwi fruit,"1 fruit (2"" dia) (69 g)",42,0.8,10.1,0.4,2.1,,vegan|vegetarian|gluten_free,snack,69.0,168153,"Kiwifruit, green, raw",USDA FoodData Central SR Legacy 2018-04
+44,Peach,"1 medium (2-2/3"" dia) (150 g)",58,1.4,14.3,0.4,2.2,,vegan|vegetarian|gluten_free,snack,150.0,169928,"Peaches, yellow, raw",USDA FoodData Central SR Legacy 2018-04
+45,"Cherries, sweet","1 cup, with pits, yields (138 g)",87,1.5,22.1,0.3,2.9,,vegan|vegetarian|gluten_free,snack,138.0,171719,"Cherries, sweet, raw",USDA FoodData Central SR Legacy 2018-04
+46,"Dates, medjool","1 date, pitted (24 g)",66,0.4,18.0,0.0,1.6,,vegan|vegetarian|gluten_free,snack,24.0,168191,"Dates, medjool",USDA FoodData Central SR Legacy 2018-04
+47,Raisins,"1 cup, packed (165 g)",493,5.4,130.9,0.4,7.4,,vegan|vegetarian|gluten_free,snack,165.0,168165,"Raisins, dark, seedless (Includes foods for USDA's Food Distribution Program)",USDA FoodData Central SR Legacy 2018-04
+48,"Figs, dried",1 fig (8 g),21,0.3,5.4,0.1,0.8,,vegan|vegetarian|gluten_free,snack,8.4,174665,"Figs, dried, uncooked",USDA FoodData Central SR Legacy 2018-04
+49,Avocado,"1 cup, cubes (150 g)",240,3.0,12.8,22.0,10.1,,vegan|vegetarian|gluten_free,lunch,150.0,171705,"Avocados, raw, all commercial varieties",USDA FoodData Central SR Legacy 2018-04
+50,Coconut water,1 cup (240 g),46,1.7,8.9,0.5,2.6,,vegan|vegetarian|gluten_free,snack,240.0,170174,"Nuts, coconut water (liquid from coconuts)",USDA FoodData Central SR Legacy 2018-04
+51,Almonds,1 oz (23 whole kernels) (28 g),164,6.0,6.1,14.2,3.5,tree_nuts,vegan|vegetarian|gluten_free,snack,28.4,170567,"Nuts, almonds",USDA FoodData Central SR Legacy 2018-04
+52,Walnuts,1 oz (14 halves) (28 g),185,4.3,3.9,18.5,1.9,tree_nuts,vegan|vegetarian|gluten_free,snack,28.4,170187,"Nuts, walnuts, english",USDA FoodData Central SR Legacy 2018-04
+53,Cashews,1 oz (28 g),157,5.2,8.6,12.4,0.9,tree_nuts,vegan|vegetarian|gluten_free,snack,28.4,170162,"Nuts, cashew nuts, raw",USDA FoodData Central SR Legacy 2018-04
+54,"Pistachios, unsalted",1 oz (49 kernels) (28 g),162,6.0,8.0,13.0,2.9,tree_nuts,vegan|vegetarian|gluten_free,snack,28.4,170185,"Nuts, pistachio nuts, dry roasted, without salt added",USDA FoodData Central SR Legacy 2018-04
+55,"Peanuts, dry-roasted, unsalted",1 oz (28 g),166,6.9,6.0,14.1,2.4,peanuts,vegan|vegetarian|gluten_free,snack,28.4,173806,"Peanuts, all types, dry-roasted, without salt",USDA FoodData Central SR Legacy 2018-04
+56,"Peanut butter, unsalted",1 tbsp (16 g),96,3.6,3.6,8.2,0.8,peanuts,vegan|vegetarian|gluten_free,snack,16.0,172470,"Peanut butter, smooth style, without salt",USDA FoodData Central SR Legacy 2018-04
+57,"Sunflower seeds, unsalted",1 oz (28 g),165,5.5,6.8,14.1,3.1,,vegan|vegetarian|gluten_free,snack,28.4,170563,"Seeds, sunflower seed kernels, dry roasted, without salt",USDA FoodData Central SR Legacy 2018-04
+58,Pumpkin seeds,1 oz (28 g),158,8.6,3.0,13.9,1.7,,vegan|vegetarian|gluten_free,snack,28.4,170556,"Seeds, pumpkin and squash seed kernels, dried",USDA FoodData Central SR Legacy 2018-04
+59,Sesame seeds,1 tbsp (9 g),52,1.6,2.1,4.5,1.1,sesame,vegan|vegetarian|gluten_free,snack,9.0,170150,"Seeds, sesame seeds, whole, dried",USDA FoodData Central SR Legacy 2018-04
+60,"Popcorn, air-popped",1 cup (8 g),31,1.0,6.2,0.4,1.2,,vegan|vegetarian|gluten_free,snack,8.0,167959,"Snacks, popcorn, air-popped",USDA FoodData Central SR Legacy 2018-04
+61,"Rice cakes, brown rice",1 cake (9 g),35,0.7,7.3,0.3,0.4,,vegan|vegetarian|gluten_free,snack,9.0,170250,"Snacks, rice cakes, brown rice, plain, unsalted",USDA FoodData Central SR Legacy 2018-04
+62,Whole-wheat crackers,1 serving (28 g),120,3.0,19.5,4.0,2.9,wheat,vegan|vegetarian,snack,28.0,172749,"Crackers, whole-wheat",USDA FoodData Central SR Legacy 2018-04
+63,"Dark chocolate, 70-85%",1 oz (28 g),170,2.2,13.0,12.1,3.1,milk|soy,vegetarian,snack,28.4,170273,"Chocolate, dark, 70-85% cacao solids",USDA FoodData Central SR Legacy 2018-04
+64,Hummus,1 tbsp (15 g),36,1.2,2.2,2.7,0.8,sesame,vegan|vegetarian,snack,15.0,174289,"Hummus, commercial",USDA FoodData Central SR Legacy 2018-04
+65,Whey protein isolate powder,1 scoop (29 g),103,16.7,8.3,0.3,0.0,milk,vegetarian,snack,28.7,173177,"Beverages, Whey protein powder isolate",USDA FoodData Central SR Legacy 2018-04
+66,"Cottage cheese, low-fat",1 cup (not packed) (226 g),163,28.0,6.1,2.3,0.0,milk,vegetarian|gluten_free,snack,226.0,173417,"Cheese, cottage, lowfat, 1% milkfat",USDA FoodData Central SR Legacy 2018-04
+67,Cheddar cheese,1 oz (28 g),114,6.5,1.0,9.4,0.0,milk,vegetarian|gluten_free,snack,28.4,173414,"Cheese, cheddar (Includes foods for USDA's Food Distribution Program)",USDA FoodData Central SR Legacy 2018-04
+68,"Mozzarella, part-skim",1 oz (28 g),72,6.9,0.8,4.5,0.0,milk,vegetarian|gluten_free,snack,28.4,170847,"Cheese, mozzarella, part skim milk",USDA FoodData Central SR Legacy 2018-04
+69,"Ricotta, part-skim",1/2 cup (124 g),171,14.1,6.4,9.8,0.0,milk,vegetarian|gluten_free,snack,124.0,171248,"Cheese, ricotta, part skim milk",USDA FoodData Central SR Legacy 2018-04
+70,"Kefir, low-fat, plain",1 cup (243 g),104,9.2,11.6,2.5,0.0,milk,vegetarian|gluten_free,snack,243.0,170904,"Kefir, lowfat, plain, LIFEWAY",USDA FoodData Central SR Legacy 2018-04
+71,Carrot,1 medium (61 g),25,0.6,5.8,0.1,1.7,,vegan|vegetarian|gluten_free,snack,61.0,170393,"Carrots, raw",USDA FoodData Central SR Legacy 2018-04
+72,Cucumber,1/2 cup slices (52 g),8,0.3,1.9,0.1,0.3,,vegan|vegetarian|gluten_free,snack,52.0,168409,"Cucumber, with peel, raw",USDA FoodData Central SR Legacy 2018-04
+73,"Chicken breast, roasted, skinless",100 g,165,31.0,0.0,3.6,0.0,,gluten_free,lunch,100.0,171477,"Chicken, broilers or fryers, breast, meat only, cooked, roasted",USDA FoodData Central SR Legacy 2018-04
+74,"Chicken thigh, roasted, skinless",100 g,179,24.8,0.0,8.2,0.0,,gluten_free,dinner,100.0,172388,"Chicken, broilers or fryers, thigh, meat only, cooked, roasted",USDA FoodData Central SR Legacy 2018-04
+75,"Turkey breast, roasted",100 g,147,30.1,0.0,2.1,0.0,,gluten_free,lunch,100.0,171496,"Turkey, whole, breast, meat only, cooked, roasted",USDA FoodData Central SR Legacy 2018-04
+76,"Salmon, baked",100 g,206,22.1,0.0,12.3,0.0,fish,gluten_free,dinner,100.0,175168,"Fish, salmon, Atlantic, farmed, cooked, dry heat",USDA FoodData Central SR Legacy 2018-04
+77,"Tuna, canned in water",100 g,86,19.4,0.0,1.0,0.0,fish,gluten_free,lunch,100.0,173709,"Fish, tuna, light, canned in water, drained solids (Includes foods for USDA's Food Distribution Program)",USDA FoodData Central SR Legacy 2018-04
+78,"Tilapia, baked",100 g,128,26.1,0.0,2.6,0.0,fish,gluten_free,dinner,100.0,175177,"Fish, tilapia, cooked, dry heat",USDA FoodData Central SR Legacy 2018-04
+79,"Cod, baked",100 g,105,22.8,0.0,0.9,0.0,fish,gluten_free,dinner,100.0,171956,"Fish, cod, Atlantic, cooked, dry heat",USDA FoodData Central SR Legacy 2018-04
+80,"Mackerel, baked",100 g,262,23.9,0.0,17.8,0.0,fish,gluten_free,dinner,100.0,175120,"Fish, mackerel, Atlantic, cooked, dry heat",USDA FoodData Central SR Legacy 2018-04
+81,"Sardines, canned in oil",1 can (3.75 oz) (92 g),191,22.7,0.0,10.5,0.0,fish,gluten_free,lunch,92.0,175139,"Fish, sardine, Atlantic, canned in oil, drained solids with bone",USDA FoodData Central SR Legacy 2018-04
+82,"Shrimp, cooked",3 oz (85 g),84,20.4,0.2,0.2,0.0,shellfish,gluten_free,dinner,85.0,175180,"Crustaceans, shrimp, cooked",USDA FoodData Central SR Legacy 2018-04
+83,"Lean beef mince 90/10, cooked",100 g,217,26.1,0.0,11.8,0.0,,gluten_free,dinner,100.0,174031,"Beef, ground, 90% lean meat / 10% fat, patty, cooked, broiled",USDA FoodData Central SR Legacy 2018-04
+84,"Pork tenderloin, roasted",100 g,143,26.2,0.0,3.5,0.0,,gluten_free,dinner,100.0,168250,"Pork, fresh, loin, tenderloin, separable lean only, cooked, roasted",USDA FoodData Central SR Legacy 2018-04
+85,"Lamb mince, cooked",100 g,283,24.8,0.0,19.6,0.0,,gluten_free,dinner,100.0,172544,"Lamb, ground, cooked, broiled",USDA FoodData Central SR Legacy 2018-04
+86,"Tofu, firm",1/2 cup (126 g),181,21.8,3.5,11.0,2.9,soy,vegan|vegetarian|gluten_free,dinner,126.0,172475,"Tofu, raw, firm, prepared with calcium sulfate",USDA FoodData Central SR Legacy 2018-04
+87,Tempeh,1 cup (166 g),319,33.7,12.7,17.9,0.0,soy,vegan|vegetarian|gluten_free,dinner,166.0,174272,Tempeh,USDA FoodData Central SR Legacy 2018-04
+88,"Edamame, cooked",1 cup (155 g),188,18.5,13.8,8.1,8.1,soy,vegan|vegetarian|gluten_free,snack,155.0,168411,"Edamame, frozen, prepared",USDA FoodData Central SR Legacy 2018-04
+89,"Soybeans, cooked",1 cup (172 g),296,31.3,14.4,15.4,10.3,soy,vegan|vegetarian|gluten_free,dinner,172.0,174271,"Soybeans, mature cooked, boiled, without salt",USDA FoodData Central SR Legacy 2018-04
+90,"Lentils, cooked (dal base)",1 cup (198 g),230,17.9,39.9,0.8,15.6,,vegan|vegetarian|gluten_free,lunch,198.0,172421,"Lentils, mature seeds, cooked, boiled, without salt",USDA FoodData Central SR Legacy 2018-04
+91,"Red lentils (masoor), dry",1 cup (192 g),687,45.9,121.2,4.2,20.7,,vegan|vegetarian|gluten_free,lunch,192.0,174284,"Lentils, pink or red, raw",USDA FoodData Central SR Legacy 2018-04
+92,"Pigeon peas (toor), cooked",1 cup (168 g),203,11.4,39.1,0.6,11.3,,vegan|vegetarian|gluten_free,lunch,168.0,172437,"Pigeon peas (red gram), mature seeds, cooked, boiled, without salt",USDA FoodData Central SR Legacy 2018-04
+93,"Chickpeas (chana), cooked",1 cup (164 g),269,14.5,45.0,4.2,12.5,,vegan|vegetarian|gluten_free,lunch,164.0,173757,"Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",USDA FoodData Central SR Legacy 2018-04
+94,"Kidney beans (rajma), cooked",1 cup (177 g),225,15.3,40.4,0.9,13.1,,vegan|vegetarian|gluten_free,lunch,177.0,175194,"Beans, kidney, red, mature seeds, cooked, boiled, without salt",USDA FoodData Central SR Legacy 2018-04
+95,"Mung beans (moong), cooked",1 cup (202 g),212,14.2,38.7,0.8,15.4,,vegan|vegetarian|gluten_free,lunch,202.0,174257,"Mung beans, mature seeds, cooked, boiled, without salt",USDA FoodData Central SR Legacy 2018-04
+96,Mung bean sprouts,1 cup (104 g),31,3.2,6.2,0.2,1.9,,vegan|vegetarian|gluten_free,snack,104.0,169957,"Mung beans, mature seeds, sprouted, raw",USDA FoodData Central SR Legacy 2018-04
+97,"Black beans, cooked",1 cup (172 g),227,15.2,40.8,0.9,15.0,,vegan|vegetarian|gluten_free,lunch,172.0,173735,"Beans, black, mature seeds, cooked, boiled, without salt",USDA FoodData Central SR Legacy 2018-04
+98,"Pinto beans, cooked",1 cup (171 g),245,15.4,44.8,1.1,15.4,,vegan|vegetarian|gluten_free,dinner,171.0,175200,"Beans, pinto, mature seeds, cooked, boiled, without salt",USDA FoodData Central SR Legacy 2018-04
+99,"Black-eyed peas (lobia), cooked",1 cup (171 g),198,13.2,35.5,0.9,11.1,,vegan|vegetarian|gluten_free,lunch,171.0,173759,"Cowpeas, common (blackeyes, crowder, southern), mature seeds, cooked, boiled, without salt",USDA FoodData Central SR Legacy 2018-04
+100,"Split peas, cooked",1 cup (196 g),231,16.3,41.4,0.8,16.3,,vegan|vegetarian|gluten_free,dinner,196.0,172429,"Peas, split, mature seeds, cooked, boiled, without salt",USDA FoodData Central SR Legacy 2018-04
+101,Chickpea flour (besan),1 cup (92 g),356,20.6,53.2,6.2,9.9,,vegan|vegetarian|gluten_free,lunch,92.0,174288,Chickpea flour (besan),USDA FoodData Central SR Legacy 2018-04
+102,"Brown rice, cooked",1 cup (202 g),248,5.5,51.7,2.0,3.2,,vegan|vegetarian|gluten_free,lunch,202.0,169704,"Rice, brown, long-grain, cooked (Includes foods for USDA's Food Distribution Program)",USDA FoodData Central SR Legacy 2018-04
+103,"White rice, cooked",1 cup (158 g),205,4.3,44.5,0.4,0.6,,vegan|vegetarian|gluten_free,lunch,158.0,168878,"Rice, white, long-grain, regular, enriched, cooked",USDA FoodData Central SR Legacy 2018-04
+104,"Quinoa, cooked",1 cup (185 g),222,8.1,39.4,3.6,5.2,,vegan|vegetarian|gluten_free,lunch,185.0,168917,"Quinoa, cooked",USDA FoodData Central SR Legacy 2018-04
+105,"Millet, cooked",1 cup (174 g),207,6.1,41.2,1.7,2.3,,vegan|vegetarian|gluten_free,lunch,174.0,168871,"Millet, cooked",USDA FoodData Central SR Legacy 2018-04
+106,"Barley, cooked",1 cup (157 g),193,3.5,44.3,0.7,6.0,,vegan|vegetarian,dinner,157.0,170285,"Barley, pearled, cooked",USDA FoodData Central SR Legacy 2018-04
+107,"Bulgur, cooked",1 cup (182 g),151,5.6,33.8,0.4,8.2,wheat,vegan|vegetarian,dinner,182.0,170287,"Bulgur, cooked",USDA FoodData Central SR Legacy 2018-04
+108,"Couscous, cooked","1 cup, cooked (157 g)",176,6.0,36.5,0.3,2.2,wheat,vegan|vegetarian,dinner,157.0,169700,"Couscous, cooked",USDA FoodData Central SR Legacy 2018-04
+109,"Whole-wheat pasta, cooked",1 cup spaghetti not packed (117 g),174,7.0,35.2,2.0,4.6,wheat,vegan|vegetarian,dinner,117.0,168910,"Pasta, whole-wheat, cooked (Includes foods for USDA's Food Distribution Program)",USDA FoodData Central SR Legacy 2018-04
+110,"Pasta, cooked",1 cup spaghetti not packed (124 g),196,7.2,38.3,1.2,2.2,wheat,vegan|vegetarian,dinner,124.0,169737,"Pasta, cooked, enriched, without added salt",USDA FoodData Central SR Legacy 2018-04
+111,"Chapati / roti, whole wheat",1 piece (43 g),129,3.4,19.8,4.0,4.2,wheat,vegan|vegetarian,dinner,43.0,174075,"Bread, chapati or roti, whole wheat, commercially prepared, frozen",USDA FoodData Central SR Legacy 2018-04
+112,"Naan, whole wheat",1 piece (106 g),303,10.8,49.0,7.1,5.1,wheat|milk,vegetarian,dinner,106.0,174077,"Bread, naan, whole wheat, commercially prepared, refrigerated",USDA FoodData Central SR Legacy 2018-04
+113,Whole-wheat pita,"1 pita, large (6-1/2"" dia) (64 g)",168,6.3,35.8,1.1,3.9,wheat,vegan|vegetarian,lunch,64.0,174916,"Bread, pita, whole-wheat",USDA FoodData Central SR Legacy 2018-04
+114,Corn tortilla,"1 tortilla, medium (approx 6"" dia) (26 g)",58,1.5,12.1,0.7,1.4,,vegan|vegetarian|gluten_free,lunch,26.0,173241,"Tortillas, ready-to-bake or -fry, corn, without added salt",USDA FoodData Central SR Legacy 2018-04
+115,Whole-wheat flour (atta),1 cup (120 g),408,15.9,86.4,3.0,12.8,wheat,vegan|vegetarian,dinner,120.0,168893,"Wheat flour, whole-grain (Includes foods for USDA's Food Distribution Program)",USDA FoodData Central SR Legacy 2018-04
+116,"Sweet potato, baked","1 medium (2"" dia, 5"" long, raw) (114 g)",103,2.3,23.6,0.2,3.8,,vegan|vegetarian|gluten_free,dinner,114.0,168483,"Sweet potato, cooked, baked in skin, flesh, without salt",USDA FoodData Central SR Legacy 2018-04
+117,"Potato, baked with skin",1 potato medium (173 g),161,4.3,36.6,0.2,3.8,,vegan|vegetarian|gluten_free,dinner,173.0,170093,"Potatoes, baked, flesh and skin, without salt",USDA FoodData Central SR Legacy 2018-04
+118,"Sweet corn, cooked",1 cup (165 g),134,4.2,31.8,1.1,4.0,,vegan|vegetarian|gluten_free,dinner,165.0,168399,"Corn, sweet, yellow, frozen, kernels cut off cob, boiled, drained, without salt",USDA FoodData Central SR Legacy 2018-04
+119,"Broccoli, cooked","1/2 cup, chopped (78 g)",27,1.9,5.6,0.3,2.6,,vegan|vegetarian|gluten_free,dinner,78.0,169967,"Broccoli, cooked, boiled, drained, without salt",USDA FoodData Central SR Legacy 2018-04
+120,"Spinach, raw",1 cup (30 g),7,0.9,1.1,0.1,0.7,,vegan|vegetarian|gluten_free,lunch,30.0,168462,"Spinach, raw",USDA FoodData Central SR Legacy 2018-04
+121,"Spinach, cooked",1 cup (180 g),41,5.3,6.8,0.5,4.3,,vegan|vegetarian|gluten_free,dinner,180.0,168463,"Spinach, cooked, boiled, drained, without salt",USDA FoodData Central SR Legacy 2018-04
+122,"Kale, raw",1 cup (21 g),7,0.6,0.9,0.3,0.9,,vegan|vegetarian|gluten_free,lunch,21.0,168421,"Kale, raw",USDA FoodData Central SR Legacy 2018-04
+123,Tomato,"1 medium whole (2-3/5"" dia) (123 g)",22,1.1,4.8,0.2,1.5,,vegan|vegetarian|gluten_free,lunch,123.0,170457,"Tomatoes, red, ripe, raw, year round average",USDA FoodData Central SR Legacy 2018-04
+124,Romaine lettuce,1 cup shredded (47 g),8,0.6,1.5,0.1,1.0,,vegan|vegetarian|gluten_free,lunch,47.0,169247,"Lettuce, cos or romaine, raw",USDA FoodData Central SR Legacy 2018-04
+125,Red bell pepper,"1 cup, chopped (149 g)",39,1.5,9.0,0.4,3.1,,vegan|vegetarian|gluten_free,lunch,149.0,170108,"Peppers, sweet, red, raw",USDA FoodData Central SR Legacy 2018-04
+126,"Cauliflower, cooked","1/2 cup (1"" pieces) (62 g)",14,1.1,2.5,0.3,1.4,,vegan|vegetarian|gluten_free,dinner,62.0,170397,"Cauliflower, cooked, boiled, drained, without salt",USDA FoodData Central SR Legacy 2018-04
+127,"Cabbage, raw","1 cup, chopped (89 g)",22,1.1,5.2,0.1,2.2,,vegan|vegetarian|gluten_free,lunch,89.0,169975,"Cabbage, raw",USDA FoodData Central SR Legacy 2018-04
+128,Onion,"1 cup, chopped (160 g)",64,1.8,14.9,0.2,2.7,,vegan|vegetarian|gluten_free,dinner,160.0,170000,"Onions, raw",USDA FoodData Central SR Legacy 2018-04
+129,"Mushrooms, white","1 cup, pieces or slices (70 g)",15,2.2,2.3,0.2,0.7,,vegan|vegetarian|gluten_free,dinner,70.0,169251,"Mushrooms, white, raw",USDA FoodData Central SR Legacy 2018-04
+130,"Green beans, cooked",1 cup (125 g),44,2.4,9.8,0.4,4.0,,vegan|vegetarian|gluten_free,dinner,125.0,169141,"Beans, snap, green, cooked, boiled, drained, without salt",USDA FoodData Central SR Legacy 2018-04
+131,"Green peas, cooked",1/2 cup (80 g),62,4.1,11.4,0.2,3.6,,vegan|vegetarian|gluten_free,dinner,80.0,170017,"Peas, green, frozen, cooked, boiled, drained, without salt",USDA FoodData Central SR Legacy 2018-04
+132,"Zucchini, cooked","1 cup, sliced (180 g)",27,2.1,4.8,0.6,1.8,,vegan|vegetarian|gluten_free,dinner,180.0,169292,"Squash, summer, zucchini, includes skin, cooked, boiled, drained, without salt",USDA FoodData Central SR Legacy 2018-04
+133,"Okra (bhindi), cooked",1/2 cup slices (80 g),18,1.5,3.6,0.2,2.0,,vegan|vegetarian|gluten_free,dinner,80.0,169261,"Okra, cooked, boiled, drained, without salt",USDA FoodData Central SR Legacy 2018-04
+134,"Eggplant (brinjal), cooked","1 cup (1"" cubes) (99 g)",35,0.8,8.6,0.2,2.5,,vegan|vegetarian|gluten_free,dinner,99.0,169229,"Eggplant, cooked, boiled, drained, without salt",USDA FoodData Central SR Legacy 2018-04
+135,"Bitter gourd (karela), cooked","1 cup (1/2"" pieces) (124 g)",24,1.0,5.4,0.2,2.5,,vegan|vegetarian|gluten_free,dinner,124.0,168394,"Balsam-pear (bitter gourd), pods, cooked, boiled, drained, without salt",USDA FoodData Central SR Legacy 2018-04
+136,"Pumpkin, cooked","1 cup, mashed (245 g)",49,1.8,12.0,0.2,2.7,,vegan|vegetarian|gluten_free,dinner,245.0,168449,"Pumpkin, cooked, boiled, drained, without salt",USDA FoodData Central SR Legacy 2018-04
+137,"Beetroot, cooked",1/2 cup slices (85 g),37,1.4,8.5,0.2,1.7,,vegan|vegetarian|gluten_free,lunch,85.0,169146,"Beets, cooked, boiled, drained",USDA FoodData Central SR Legacy 2018-04
+138,"Asparagus, cooked",1/2 cup (90 g),20,2.2,3.7,0.2,1.8,,vegan|vegetarian|gluten_free,dinner,90.0,168390,"Asparagus, cooked, boiled, drained",USDA FoodData Central SR Legacy 2018-04
+139,"Brussels sprouts, cooked",1/2 cup (78 g),28,2.0,5.5,0.4,2.0,,vegan|vegetarian|gluten_free,dinner,78.0,169971,"Brussels sprouts, cooked, boiled, drained, without salt",USDA FoodData Central SR Legacy 2018-04
+140,Garlic,1 clove (3 g),4,0.2,1.0,0.0,0.1,,vegan|vegetarian|gluten_free,dinner,3.0,169230,"Garlic, raw",USDA FoodData Central SR Legacy 2018-04
+141,Olive oil,1 tablespoon (14 g),119,0.0,0.0,13.5,0.0,,vegan|vegetarian|gluten_free,dinner,13.5,171413,"Oil, olive, salad or cooking",USDA FoodData Central SR Legacy 2018-04
+142,Canola oil,1 tbsp (14 g),124,0.0,0.0,14.0,0.0,,vegan|vegetarian|gluten_free,dinner,14.0,172336,"Oil, canola",USDA FoodData Central SR Legacy 2018-04
+143,Coconut oil,1 tbsp (14 g),121,0.0,0.0,13.5,0.0,,vegan|vegetarian|gluten_free,dinner,13.6,171412,"Oil, coconut",USDA FoodData Central SR Legacy 2018-04
+144,"Butter, unsalted",1 tbsp (14 g),102,0.1,0.0,11.5,0.0,milk,vegetarian|gluten_free,breakfast,14.2,173430,"Butter, without salt",USDA FoodData Central SR Legacy 2018-04
+145,Ghee (clarified butter),100 g,900,0.0,0.0,100.0,0.0,milk,vegetarian|gluten_free,dinner,100.0,171314,"Butter, Clarified butter (ghee)",USDA FoodData Central SR Legacy 2018-04
+146,Marinara sauce,1 serving 1/2 cup (132 g),66,1.8,9.8,2.1,2.4,,vegan|vegetarian,dinner,132.0,171192,"Sauce, pasta, spaghetti/marinara, ready-to-serve",USDA FoodData Central SR Legacy 2018-04
+147,"Chicken noodle soup, canned",1 serving 1 cup (248 g),60,2.9,7.4,1.9,1.2,wheat|egg,,lunch,248.0,172909,"Soup, chicken noodle, canned, prepared with equal volume water",USDA FoodData Central SR Legacy 2018-04
