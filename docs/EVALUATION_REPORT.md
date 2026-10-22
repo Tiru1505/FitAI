@@ -112,6 +112,40 @@ rather than with noise. Front-facing exercises whose movement happens in the ima
 lunge) are near-perfect. Fix options: view-aware thresholds, using the 3D pose, or prompting the user
 to stand side-on, which is what the FitAI app already advises.
 
+### 4b. Threshold tuning experiment (`tune_rep_counter.py`)
+
+The counter's joint angles were set by hand from textbook ranges. A grid search over the start and
+target thresholds, smoothing window and hysteresis was run **on the training workouts only**, then
+scored on the five unseen-subject workouts — searching over everything and quoting the best figure
+would be fitting the test set.
+
+| Exercise | Start (hand → tuned) | Target (hand → tuned) | Test MAE | Within ±1 | Zero-count sets |
+|---|---|---|---|---|---|
+| Squat | 160° → 165° | 100° → **140°** | 5.53 → **2.40** | 40% → 60% | 4 → 1 |
+| Lunge | 160° → 140° | 105° → 95° | 0.67 → **0.53** | 87% → 80% | 0 → 0 |
+| Push-up | 150° → 145° | 95° → **115°** | 2.67 → **2.07** | 67% → 80% | 2 → 2 |
+| Biceps curl | 150° → 130° | 65° → 55° | 0.00 → **0.00** | 100% → 100% | 0 → 0 |
+| Shoulder press | 105° → 95° | 155° → **135°** | 3.42 → **0.25** | 25% → 100% | 0 → 0 |
+| **Overall** | | | **2.49 → 1.11** (−55%) | | 6 → 3 |
+
+**Interpretation — and why these values are not simply adopted.** Every tuned target moved toward a
+*shallower* requirement: squat 100° → 140°, push-up 95° → 115°, shoulder press 155° → 135°. That is
+exactly what a single head-on camera predicts, because foreshortening compresses the measured joint
+angle, so a genuinely deep squat never reaches 100° on screen. The tuning has therefore measured
+MM-Fit's camera geometry as much as it has measured good thresholds.
+
+Adopting 140° for squats would make the live app count a quarter-squat as a repetition for a user
+standing side-on, where the true angle *is* available. The defensible conclusion is that **the
+threshold should depend on the viewpoint**, not that the hand-set values were wrong. Options, in
+increasing order of merit:
+
+1. Ship a per-dataset threshold profile (frontal vs side), selected from the detected view.
+2. Calibrate per session: observe the user's own angle range over the first repetition and set the
+   thresholds as a fraction of it. This removes the fixed constants entirely and adapts to body
+   proportions and camera placement at once.
+
+Raw grid-search output: `ml/results/rep_counter_tuning.json`.
+
 ## 5. Live inference (from `workout_sessions.inference_stats`)
 
 | Metric | Value | Notes |

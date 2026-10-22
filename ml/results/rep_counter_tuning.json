@@ -1,0 +1,222 @@
+{
+  "squat": {
+    "current": {
+      "start": 160.0,
+      "target": 100.0,
+      "smoothing_window": 5,
+      "hysteresis": 8.0
+    },
+    "tuned": {
+      "start": 165.0,
+      "target": 140.0,
+      "smoothing_window": 3,
+      "hysteresis": 5.0
+    },
+    "tune_split": {
+      "current": {
+        "n": 49,
+        "mae": 3.184,
+        "within_one_pct": 63.3,
+        "zero_count_sets": 13
+      },
+      "tuned": {
+        "n": 49,
+        "mae": 1.245,
+        "within_one_pct": 85.7,
+        "zero_count_sets": 3
+      }
+    },
+    "test_split": {
+      "current": {
+        "n": 15,
+        "mae": 5.533,
+        "within_one_pct": 40.0,
+        "zero_count_sets": 4
+      },
+      "tuned": {
+        "n": 15,
+        "mae": 2.4,
+        "within_one_pct": 60.0,
+        "zero_count_sets": 1
+      }
+    }
+  },
+  "lunge": {
+    "current": {
+      "start": 160.0,
+      "target": 105.0,
+      "smoothing_window": 5,
+      "hysteresis": 8.0
+    },
+    "tuned": {
+      "start": 140.0,
+      "target": 95.0,
+      "smoothing_window": 3,
+      "hysteresis": 5.0
+    },
+    "tune_split": {
+      "current": {
+        "n": 47,
+        "mae": 0.255,
+        "within_one_pct": 93.6,
+        "zero_count_sets": 0
+      },
+      "tuned": {
+        "n": 47,
+        "mae": 0,
+        "within_one_pct": 100.0,
+        "zero_count_sets": 0
+      }
+    },
+    "test_split": {
+      "current": {
+        "n": 15,
+        "mae": 0.667,
+        "within_one_pct": 86.7,
+        "zero_count_sets": 0
+      },
+      "tuned": {
+        "n": 15,
+        "mae": 0.533,
+        "within_one_pct": 80.0,
+        "zero_count_sets": 0
+      }
+    }
+  },
+  "push_up": {
+    "current": {
+      "start": 150.0,
+      "target": 95.0,
+      "smoothing_window": 5,
+      "hysteresis": 8.0
+    },
+    "tuned": {
+      "start": 145.0,
+      "target": 115.0,
+      "smoothing_window": 9,
+      "hysteresis": 5.0
+    },
+    "tune_split": {
+      "current": {
+        "n": 50,
+        "mae": 3.22,
+        "within_one_pct": 40.0,
+        "zero_count_sets": 1
+      },
+      "tuned": {
+        "n": 50,
+        "mae": 2.56,
+        "within_one_pct": 48.0,
+        "zero_count_sets": 1
+      }
+    },
+    "test_split": {
+      "current": {
+        "n": 15,
+        "mae": 2.667,
+        "within_one_pct": 66.7,
+        "zero_count_sets": 2
+      },
+      "tuned": {
+        "n": 15,
+        "mae": 2.067,
+        "within_one_pct": 80.0,
+        "zero_count_sets": 2
+      }
+    }
+  },
+  "biceps_curl": {
+    "current": {
+      "start": 150.0,
+      "target": 65.0,
+      "smoothing_window": 5,
+      "hysteresis": 8.0
+    },
+    "tuned": {
+      "start": 130.0,
+      "target": 55.0,
+      "smoothing_window": 3,
+      "hysteresis": 5.0
+    },
+    "tune_split": {
+      "current": {
+        "n": 46,
+        "mae": 0,
+        "within_one_pct": 100.0,
+        "zero_count_sets": 0
+      },
+      "tuned": {
+        "n": 46,
+        "mae": 0,
+        "within_one_pct": 100.0,
+        "zero_count_sets": 0
+      }
+    },
+    "test_split": {
+      "current": {
+        "n": 13,
+        "mae": 0,
+        "within_one_pct": 100.0,
+        "zero_count_sets": 0
+      },
+      "tuned": {
+        "n": 13,
+        "mae": 0,
+        "within_one_pct": 100.0,
+        "zero_count_sets": 0
+      }
+    }
+  },
+  "shoulder_press": {
+    "current": {
+      "start": 105.0,
+      "target": 155.0,
+      "smoothing_window": 5,
+      "hysteresis": 8.0
+    },
+    "tuned": {
+      "start": 95.0,
+      "target": 135.0,
+      "smoothing_window": 3,
+      "hysteresis": 5.0
+    },
+    "tune_split": {
+      "current": {
+        "n": 48,
+        "mae": 1.146,
+        "within_one_pct": 77.1,
+        "zero_count_sets": 1
+      },
+      "tuned": {
+        "n": 48,
+        "mae": 0,
+        "within_one_pct": 100.0,
+        "zero_count_sets": 0
+      }
+    },
+    "test_split": {
+      "current": {
+        "n": 12,
+        "mae": 3.417,
+        "within_one_pct": 25.0,
+        "zero_count_sets": 0
+      },
+      "tuned": {
+        "n": 12,
+        "mae": 0.25,
+        "within_one_pct": 100.0,
+        "zero_count_sets": 0
+      }
+    }
+  },
+  "_overall_mae": {
+    "tune": {
+      "current": 1.6,
+      "tuned": 0.788
+    },
+    "test": {
+      "current": 2.486,
+      "tuned": 1.114
+    }
+  }
+}
