@@ -1,0 +1,61 @@
+{
+  "data": "C:\\Users\\tirup\\OneDrive\\Desktop\\fitai\\ml\\results\\pipeline_demo_20260918_230557\\sequences.npz",
+  "task": "exercise",
+  "exercise": null,
+  "model": "bilstm",
+  "epochs": 30,
+  "batch_size": 64,
+  "lr": 0.001,
+  "dropout": 0.3,
+  "recurrent_dropout": 0.0,
+  "l2": 0.0,
+  "units": 64,
+  "augment": 0,
+  "patience": 10,
+  "focal_loss": false,
+  "no_class_weights": false,
+  "seed": 42,
+  "export": false,
+  "labels": [
+    "biceps_curl",
+    "lunge",
+    "push_up",
+    "shoulder_press",
+    "squat"
+  ],
+  "sequence_length": 60,
+  "train_windows": 7786,
+  "val_windows": 1862,
+  "test_windows": 2472,
+  "participants": {
+    "train": [
+      "w01",
+      "w02",
+      "w03",
+      "w04",
+      "w06",
+      "w07",
+      "w08",
+      "w09",
+      "w10",
+      "w11",
+      "w16",
+      "w17",
+      "w18"
+    ],
+    "val": [
+      "w14",
+      "w15",
+      "w19"
+    ],
+    "test": [
+      "w00",
+      "w05",
+      "w12",
+      "w13",
+      "w20"
+    ]
+  },
+  "train_seconds": 85.39,
+  "epochs_run": 15
+}

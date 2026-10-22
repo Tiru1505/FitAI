@@ -1,0 +1,16 @@
+{
+  "name": "exercise_classifier",
+  "model_type": "bilstm",
+  "feature_set": "xyv99",
+  "normalization": "hip_center_body_scale",
+  "sequence_length": 60,
+  "labels": [
+    "biceps_curl",
+    "lunge",
+    "push_up",
+    "shoulder_press",
+    "squat"
+  ],
+  "trained_at": "2026-09-18T23:34:53",
+  "run_dir": "C:\\Users\\tirup\\OneDrive\\Desktop\\fitai\\ml\\results\\exercise_classifier_bilstm_20260918_231247"
+}

@@ -1,0 +1,321 @@
+FitAI pipeline demo
+started: 2026-09-18 23:05:57
+python 3.10.0 on Windows 10
+output: C:\Users\tirup\OneDrive\Desktop\fitai\ml\results\pipeline_demo_20260918_230557
+
+==============================================================================
+[1/6] Data loading and preprocessing (landmarks -> normalised windows, split by participant)
+==============================================================================
+$ python ml/scripts/build_sequences.py --inputs ml/data/landmarks/mmfit.csv --out C:\Users\tirup\OneDrive\Desktop\fitai\ml\results\pipeline_demo_20260918_230557\sequences.npz --sequence-length 60 --stride 15 --val-participants w14 w15 w19 --test-participants w00 w05 w12 w13 w20
+
+{
+  "inputs": [
+    "ml\\data\\landmarks\\mmfit.csv"
+  ],
+  "sequence_length": 60,
+  "stride": 15,
+  "feature_set": "xyv99",
+  "exercise_labels": [
+    "biceps_curl",
+    "lunge",
+    "push_up",
+    "shoulder_press",
+    "squat"
+  ],
+  "form_labels": [
+    "correct"
+  ],
+  "participants": {
+    "train": [
+      "w01",
+      "w02",
+      "w03",
+      "w04",
+      "w06",
+      "w07",
+      "w08",
+      "w09",
+      "w10",
+      "w11",
+      "w16",
+      "w17",
+      "w18"
+    ],
+    "val": [
+      "w14",
+      "w15",
+      "w19"
+    ],
+    "test": [
+      "w00",
+      "w05",
+      "w12",
+      "w13",
+      "w20"
+    ]
+  },
+  "windows": {
+    "train": 7786,
+    "val": 1862,
+    "test": 2472
+  },
+  "samples": 310,
+  "windows_kept": 12120,
+  "windows_dropped_low_visibility": 0,
+  "frames_low_visibility": 0
+}
+
+-- finished in 17.6s (exit code 0)
+
+==============================================================================
+[2/6] Dataset summary
+==============================================================================
+sequence length: 60 frames, stride 15, features 99
+exercise labels: biceps_curl, lunge, push_up, shoulder_press, squat
+form labels:     correct
+
+split   participants                        windows  class distribution
+train   w01, w02, w03, w04, w06, w07, w0       7786  {'biceps_curl': 1319, 'lunge': 2046, 'push_up': 1213, 'shoulder_press': 1676, 'squat': 1532}
+val     w14, w15, w19                          1862  {'biceps_curl': 361, 'lunge': 468, 'push_up': 303, 'shoulder_press': 423, 'squat': 307}
+test    w00, w05, w12, w13, w20                2472  {'biceps_curl': 424, 'lunge': 765, 'push_up': 392, 'shoulder_press': 360, 'squat': 531}
+
+participant-independent test split: yes (no participant appears in two splits)
+windows dropped for low visibility: 0
+
+==============================================================================
+[3/6] Training: baseline (baseline)
+==============================================================================
+$ python ml/scripts/train.py --data C:\Users\tirup\OneDrive\Desktop\fitai\ml\results\pipeline_demo_20260918_230557\sequences.npz --task exercise --model baseline --epochs 30 --batch-size 64
+
+validation macro F1 = 0.9877  accuracy = 0.9876
+run saved to C:\Users\tirup\OneDrive\Desktop\fitai\ml\results\exercise_classifier_baseline_20260918_230618
+
+-- finished in 3.0s (exit code 0)
+
+==============================================================================
+[3/6] Evaluating baseline on held-out participants
+==============================================================================
+$ python ml/scripts/evaluate.py --data C:\Users\tirup\OneDrive\Desktop\fitai\ml\results\pipeline_demo_20260918_230557\sequences.npz --run C:\Users\tirup\OneDrive\Desktop\fitai\ml\results\exercise_classifier_baseline_20260918_230618
+
+{
+  "n": 2472,
+  "accuracy": 0.9895,
+  "macro_precision": 0.9901,
+  "macro_recall": 0.9932,
+  "macro_f1": 0.9915,
+  "latency_ms_per_window": {
+    "mean": 0.178,
+    "p50": 0.159,
+    "p95": 0.321,
+    "trials": 200
+  }
+}
+
+-- finished in 2.8s (exit code 0)
+
+==============================================================================
+[4/6] Training: bilstm (primary model)
+==============================================================================
+$ python ml/scripts/train.py --data C:\Users\tirup\OneDrive\Desktop\fitai\ml\results\pipeline_demo_20260918_230557\sequences.npz --task exercise --model bilstm --epochs 30 --batch-size 64
+
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789752983.933118   36804 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789752988.552790   36804 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789752990.505560   36804 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+Epoch 1/30
+122/122 - 15s - 125ms/step - accuracy: 0.8452 - loss: 0.4190 - val_accuracy: 0.7884 - val_loss: 0.8740
+Epoch 2/30
+122/122 - 7s - 59ms/step - accuracy: 0.9751 - loss: 0.0805 - val_accuracy: 0.9221 - val_loss: 0.3708
+Epoch 3/30
+122/122 - 6s - 51ms/step - accuracy: 0.9847 - loss: 0.0474 - val_accuracy: 0.9178 - val_loss: 0.5408
+Epoch 4/30
+122/122 - 6s - 49ms/step - accuracy: 0.9959 - loss: 0.0157 - val_accuracy: 0.9296 - val_loss: 0.3712
+Epoch 5/30
+122/122 - 5s - 44ms/step - accuracy: 0.9690 - loss: 0.1070 - val_accuracy: 0.9339 - val_loss: 0.2693
+Epoch 6/30
+122/122 - 5s - 40ms/step - accuracy: 0.9977 - loss: 0.0105 - val_accuracy: 0.8963 - val_loss: 0.5228
+Epoch 7/30
+122/122 - 5s - 40ms/step - accuracy: 0.9947 - loss: 0.0174 - val_accuracy: 0.9114 - val_loss: 0.7011
+Epoch 8/30
+122/122 - 5s - 39ms/step - accuracy: 0.9977 - loss: 0.0096 - val_accuracy: 0.9495 - val_loss: 0.4208
+Epoch 9/30
+122/122 - 4s - 34ms/step - accuracy: 0.9992 - loss: 0.0033 - val_accuracy: 0.9404 - val_loss: 0.5345
+Epoch 10/30
+122/122 - 4s - 36ms/step - accuracy: 0.9978 - loss: 0.0092 - val_accuracy: 0.9211 - val_loss: 0.6048
+Epoch 11/30
+122/122 - 5s - 38ms/step - accuracy: 0.9653 - loss: 0.1148 - val_accuracy: 0.8480 - val_loss: 0.8452
+Epoch 12/30
+122/122 - 5s - 40ms/step - accuracy: 0.9534 - loss: 0.1409 - val_accuracy: 0.8657 - val_loss: 0.7726
+Epoch 13/30
+122/122 - 4s - 35ms/step - accuracy: 0.9846 - loss: 0.0494 - val_accuracy: 0.9501 - val_loss: 0.3241
+Epoch 14/30
+122/122 - 4s - 35ms/step - accuracy: 0.9947 - loss: 0.0209 - val_accuracy: 0.7556 - val_loss: 1.8161
+Epoch 15/30
+122/122 - 4s - 35ms/step - accuracy: 0.9981 - loss: 0.0099 - val_accuracy: 0.9291 - val_loss: 0.5663
+validation macro F1 = 0.9346  accuracy = 0.9339
+run saved to C:\Users\tirup\OneDrive\Desktop\fitai\ml\results\exercise_classifier_bilstm_20260918_230623
+
+-- finished in 96.6s (exit code 0)
+
+==============================================================================
+[4/6] Evaluating bilstm on held-out participants
+==============================================================================
+$ python ml/scripts/evaluate.py --data C:\Users\tirup\OneDrive\Desktop\fitai\ml\results\pipeline_demo_20260918_230557\sequences.npz --run C:\Users\tirup\OneDrive\Desktop\fitai\ml\results\exercise_classifier_bilstm_20260918_230623
+
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789753080.426244   31224 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789753082.623653   31224 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789753083.593621   31224 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+{
+  "n": 2472,
+  "accuracy": 0.9879,
+  "macro_precision": 0.9857,
+  "macro_recall": 0.9912,
+  "macro_f1": 0.9883,
+  "latency_ms_per_window": {
+    "mean": 4.234,
+    "p50": 4.025,
+    "p95": 5.658,
+    "trials": 200
+  }
+}
+
+-- finished in 9.4s (exit code 0)
+
+==============================================================================
+[5/6] Training: gru (comparison)
+==============================================================================
+$ python ml/scripts/train.py --data C:\Users\tirup\OneDrive\Desktop\fitai\ml\results\pipeline_demo_20260918_230557\sequences.npz --task exercise --model gru --epochs 30 --batch-size 64
+
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789753089.704342   35332 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789753092.123937   35332 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789753092.930373   35332 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+Epoch 1/30
+122/122 - 9s - 74ms/step - accuracy: 0.8355 - loss: 0.4563 - val_accuracy: 0.9296 - val_loss: 0.2027
+Epoch 2/30
+122/122 - 6s - 51ms/step - accuracy: 0.9896 - loss: 0.0369 - val_accuracy: 0.9731 - val_loss: 0.1149
+Epoch 3/30
+122/122 - 7s - 54ms/step - accuracy: 0.9913 - loss: 0.0325 - val_accuracy: 0.9646 - val_loss: 0.1488
+Epoch 4/30
+122/122 - 7s - 57ms/step - accuracy: 0.9990 - loss: 0.0050 - val_accuracy: 0.9694 - val_loss: 0.1309
+Epoch 5/30
+122/122 - 7s - 53ms/step - accuracy: 0.9974 - loss: 0.0104 - val_accuracy: 0.9753 - val_loss: 0.1124
+Epoch 6/30
+122/122 - 6s - 49ms/step - accuracy: 0.9940 - loss: 0.0188 - val_accuracy: 0.9705 - val_loss: 0.1516
+Epoch 7/30
+122/122 - 6s - 52ms/step - accuracy: 0.9994 - loss: 0.0023 - val_accuracy: 0.9672 - val_loss: 0.1900
+Epoch 8/30
+122/122 - 7s - 56ms/step - accuracy: 1.0000 - loss: 6.5298e-04 - val_accuracy: 0.9737 - val_loss: 0.1642
+Epoch 9/30
+122/122 - 7s - 60ms/step - accuracy: 1.0000 - loss: 4.4336e-04 - val_accuracy: 0.9726 - val_loss: 0.1525
+Epoch 10/30
+122/122 - 6s - 53ms/step - accuracy: 1.0000 - loss: 3.3404e-04 - val_accuracy: 0.9731 - val_loss: 0.1613
+Epoch 11/30
+122/122 - 6s - 52ms/step - accuracy: 1.0000 - loss: 2.5155e-04 - val_accuracy: 0.9715 - val_loss: 0.1856
+Epoch 12/30
+122/122 - 6s - 52ms/step - accuracy: 1.0000 - loss: 2.2416e-04 - val_accuracy: 0.9699 - val_loss: 0.1831
+Epoch 13/30
+122/122 - 7s - 55ms/step - accuracy: 1.0000 - loss: 1.8973e-04 - val_accuracy: 0.9742 - val_loss: 0.1537
+Epoch 14/30
+122/122 - 7s - 56ms/step - accuracy: 1.0000 - loss: 1.5341e-04 - val_accuracy: 0.9731 - val_loss: 0.1791
+Epoch 15/30
+122/122 - 6s - 53ms/step - accuracy: 1.0000 - loss: 1.4395e-04 - val_accuracy: 0.9731 - val_loss: 0.1755
+validation macro F1 = 0.9752  accuracy = 0.9753
+run saved to C:\Users\tirup\OneDrive\Desktop\fitai\ml\results\exercise_classifier_gru_20260918_230809
+
+-- finished in 109.7s (exit code 0)
+
+==============================================================================
+[5/6] Evaluating gru on held-out participants
+==============================================================================
+$ python ml/scripts/evaluate.py --data C:\Users\tirup\OneDrive\Desktop\fitai\ml\results\pipeline_demo_20260918_230557\sequences.npz --run C:\Users\tirup\OneDrive\Desktop\fitai\ml\results\exercise_classifier_gru_20260918_230809
+
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789753199.353871   10368 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789753201.764362   10368 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789753202.924029   10368 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+{
+  "n": 2472,
+  "accuracy": 0.9992,
+  "macro_precision": 0.9995,
+  "macro_recall": 0.9991,
+  "macro_f1": 0.9993,
+  "latency_ms_per_window": {
+    "mean": 8.076,
+    "p50": 7.936,
+    "p95": 9.61,
+    "trials": 200
+  }
+}
+
+-- finished in 11.4s (exit code 0)
+
+==============================================================================
+[6/6] Repetition counter (joint-angle state machine) against manual counts
+==============================================================================
+$ python ml/scripts/evaluate_rep_counter.py --landmarks ml/data/landmarks/mmfit.csv --labels ml\data\mmfit_rep_counts.csv --out C:\Users\tirup\OneDrive\Desktop\fitai\ml\results\pipeline_demo_20260918_230557\rep_counter_metrics.json
+
+{
+  "overall": {
+    "n": 310,
+    "mae": 1.8,
+    "within_one_pct": 71.9
+  },
+  "per_exercise": {
+    "biceps_curl": {
+      "n": 59,
+      "mae": 0.0,
+      "within_one_pct": 100.0
+    },
+    "lunge": {
+      "n": 62,
+      "mae": 0.355,
+      "within_one_pct": 91.9
+    },
+    "push_up": {
+      "n": 65,
+      "mae": 3.092,
+      "within_one_pct": 46.2
+    },
+    "shoulder_press": {
+      "n": 60,
+      "mae": 1.6,
+      "within_one_pct": 66.7
+    },
+    "squat": {
+      "n": 64,
+      "mae": 3.734,
+      "within_one_pct": 57.8
+    }
+  }
+}
+
+-- finished in 115.1s (exit code 0)
+
+==============================================================================
+[6/6] Model comparison (test participants)
+==============================================================================
+baseline   val macro F1 0.9877   test macro F1 0.9915   accuracy 0.9895   latency p50 0.159 ms
+bilstm     val macro F1 0.9346   test macro F1 0.9883   accuracy 0.9879   latency p50 4.025 ms
+gru        val macro F1 0.9752   test macro F1 0.9993   accuracy 0.9992   latency p50 7.936 ms
+
+best by test macro F1: gru (0.9993) from exercise_classifier_gru_20260918_230809
+
+Done in 366s.
+Evidence for the review:
+  C:\Users\tirup\OneDrive\Desktop\fitai\ml\results\pipeline_demo_20260918_230557\execution_log.txt
+  C:\Users\tirup\OneDrive\Desktop\fitai\ml\results\pipeline_demo_20260918_230557\RESULTS.md
+  C:\Users\tirup\OneDrive\Desktop\fitai\ml\results\pipeline_demo_20260918_230557/*_confusion_matrix.png

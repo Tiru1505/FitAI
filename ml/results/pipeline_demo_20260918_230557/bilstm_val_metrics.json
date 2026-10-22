@@ -1,0 +1,83 @@
+{
+  "n": 1862,
+  "accuracy": 0.9339,
+  "macro_precision": 0.9367,
+  "macro_recall": 0.9468,
+  "macro_f1": 0.9346,
+  "per_class": {
+    "biceps_curl": {
+      "precision": 0.9757,
+      "recall": 1.0,
+      "f1": 0.9877,
+      "support": 361
+    },
+    "lunge": {
+      "precision": 1.0,
+      "recall": 0.7436,
+      "f1": 0.8529,
+      "support": 468
+    },
+    "push_up": {
+      "precision": 0.9558,
+      "recall": 1.0,
+      "f1": 0.9774,
+      "support": 303
+    },
+    "shoulder_press": {
+      "precision": 0.9976,
+      "recall": 1.0,
+      "f1": 0.9988,
+      "support": 423
+    },
+    "squat": {
+      "precision": 0.7543,
+      "recall": 0.9902,
+      "f1": 0.8563,
+      "support": 307
+    }
+  },
+  "labels": [
+    "biceps_curl",
+    "lunge",
+    "push_up",
+    "shoulder_press",
+    "squat"
+  ],
+  "confusion_matrix": [
+    [
+      361,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      7,
+      348,
+      14,
+      0,
+      99
+    ],
+    [
+      0,
+      0,
+      303,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      423,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      1,
+      304
+    ]
+  ]
+}

@@ -1,0 +1,2206 @@
+{
+  "overall": {
+    "n": 310,
+    "mae": 1.8,
+    "within_one_pct": 71.9
+  },
+  "per_exercise": {
+    "biceps_curl": {
+      "n": 59,
+      "mae": 0.0,
+      "within_one_pct": 100.0
+    },
+    "lunge": {
+      "n": 62,
+      "mae": 0.355,
+      "within_one_pct": 91.9
+    },
+    "push_up": {
+      "n": 65,
+      "mae": 3.092,
+      "within_one_pct": 46.2
+    },
+    "shoulder_press": {
+      "n": 60,
+      "mae": 1.6,
+      "within_one_pct": 66.7
+    },
+    "squat": {
+      "n": 64,
+      "mae": 3.734,
+      "within_one_pct": 57.8
+    }
+  },
+  "samples": [
+    {
+      "sample_id": "w00_biceps_curl_50955",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w00_biceps_curl_52054",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w00_biceps_curl_52966",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w00_lunge_22147",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w00_lunge_25391",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w00_lunge_29277",
+      "exercise": "lunge",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w00_push_up_11160",
+      "exercise": "push_up",
+      "predicted": 6,
+      "true": 10,
+      "abs_error": 4
+    },
+    {
+      "sample_id": "w00_push_up_13620",
+      "exercise": "push_up",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w00_push_up_8770",
+      "exercise": "push_up",
+      "predicted": 11,
+      "true": 11,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w00_shoulder_press_15034",
+      "exercise": "shoulder_press",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w00_shoulder_press_17570",
+      "exercise": "shoulder_press",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w00_shoulder_press_20482",
+      "exercise": "shoulder_press",
+      "predicted": 6,
+      "true": 9,
+      "abs_error": 3
+    },
+    {
+      "sample_id": "w00_squat_4040",
+      "exercise": "squat",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w00_squat_5435",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w00_squat_7200",
+      "exercise": "squat",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w01_biceps_curl_54733",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w01_biceps_curl_63019",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w01_biceps_curl_64099",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w01_lunge_24360",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w01_lunge_29060",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w01_lunge_33364",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w01_push_up_11960",
+      "exercise": "push_up",
+      "predicted": 5,
+      "true": 10,
+      "abs_error": 5
+    },
+    {
+      "sample_id": "w01_push_up_15150",
+      "exercise": "push_up",
+      "predicted": 5,
+      "true": 10,
+      "abs_error": 5
+    },
+    {
+      "sample_id": "w01_push_up_18065",
+      "exercise": "push_up",
+      "predicted": 0,
+      "true": 10,
+      "abs_error": 10
+    },
+    {
+      "sample_id": "w01_shoulder_press_20509",
+      "exercise": "shoulder_press",
+      "predicted": 11,
+      "true": 11,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w01_shoulder_press_21864",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w01_shoulder_press_22819",
+      "exercise": "shoulder_press",
+      "predicted": 11,
+      "true": 11,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w01_squat_2113",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w01_squat_3210",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w01_squat_5086",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w02_biceps_curl_59663",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w02_biceps_curl_60918",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w02_biceps_curl_62391",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w02_lunge_24072",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w02_lunge_27535",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w02_lunge_29067",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w02_push_up_10958",
+      "exercise": "push_up",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w02_push_up_6238",
+      "exercise": "push_up",
+      "predicted": 13,
+      "true": 10,
+      "abs_error": 3
+    },
+    {
+      "sample_id": "w02_push_up_7984",
+      "exercise": "push_up",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w02_shoulder_press_16302",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w02_shoulder_press_19903",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w02_shoulder_press_22550",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w02_squat_2495",
+      "exercise": "squat",
+      "predicted": 0,
+      "true": 10,
+      "abs_error": 10
+    },
+    {
+      "sample_id": "w02_squat_3520",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w02_squat_5109",
+      "exercise": "squat",
+      "predicted": 0,
+      "true": 10,
+      "abs_error": 10
+    },
+    {
+      "sample_id": "w03_biceps_curl_47813",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w03_biceps_curl_49509",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w03_biceps_curl_51635",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w03_lunge_24345",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w03_lunge_26046",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w03_lunge_27337",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w03_push_up_13510",
+      "exercise": "push_up",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w03_push_up_15224",
+      "exercise": "push_up",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w03_push_up_6384",
+      "exercise": "push_up",
+      "predicted": 5,
+      "true": 10,
+      "abs_error": 5
+    },
+    {
+      "sample_id": "w03_shoulder_press_18054",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w03_shoulder_press_20140",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w03_shoulder_press_21843",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w03_squat_3803",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w03_squat_4708",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w03_squat_5575",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w04_biceps_curl_52140",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w04_lunge_22307",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w04_lunge_27679",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w04_push_up_10471",
+      "exercise": "push_up",
+      "predicted": 15,
+      "true": 10,
+      "abs_error": 5
+    },
+    {
+      "sample_id": "w04_push_up_12032",
+      "exercise": "push_up",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w04_push_up_7791",
+      "exercise": "push_up",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w04_shoulder_press_13350",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w04_shoulder_press_18970",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w04_shoulder_press_20887",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w04_squat_2899",
+      "exercise": "squat",
+      "predicted": 0,
+      "true": 10,
+      "abs_error": 10
+    },
+    {
+      "sample_id": "w04_squat_4070",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w04_squat_6042",
+      "exercise": "squat",
+      "predicted": 4,
+      "true": 10,
+      "abs_error": 6
+    },
+    {
+      "sample_id": "w05_biceps_curl_46262",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w05_biceps_curl_47380",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w05_biceps_curl_48482",
+      "exercise": "biceps_curl",
+      "predicted": 11,
+      "true": 11,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w05_lunge_16821",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w05_lunge_19636",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w05_lunge_22735",
+      "exercise": "lunge",
+      "predicted": 11,
+      "true": 11,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w05_push_up_6353",
+      "exercise": "push_up",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w05_push_up_7897",
+      "exercise": "push_up",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w05_push_up_9365",
+      "exercise": "push_up",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w05_shoulder_press_10827",
+      "exercise": "shoulder_press",
+      "predicted": 3,
+      "true": 9,
+      "abs_error": 6
+    },
+    {
+      "sample_id": "w05_shoulder_press_12724",
+      "exercise": "shoulder_press",
+      "predicted": 5,
+      "true": 9,
+      "abs_error": 4
+    },
+    {
+      "sample_id": "w05_shoulder_press_15003",
+      "exercise": "shoulder_press",
+      "predicted": 1,
+      "true": 9,
+      "abs_error": 8
+    },
+    {
+      "sample_id": "w05_squat_2830",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w05_squat_3635",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w05_squat_5112",
+      "exercise": "squat",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w06_biceps_curl_43486",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w06_biceps_curl_44671",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w06_biceps_curl_45820",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w06_lunge_13448",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w06_lunge_19541",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w06_lunge_21002",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w06_push_up_5324",
+      "exercise": "push_up",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w06_push_up_6367",
+      "exercise": "push_up",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w06_push_up_7753",
+      "exercise": "push_up",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w06_shoulder_press_10778",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w06_shoulder_press_12113",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w06_shoulder_press_9076",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w06_squat_1874",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w06_squat_3079",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w06_squat_4289",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w07_biceps_curl_57291",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w07_biceps_curl_61004",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w07_lunge_24457",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w07_lunge_26510",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w07_lunge_31538",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w07_push_up_11432",
+      "exercise": "push_up",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w07_push_up_6835",
+      "exercise": "push_up",
+      "predicted": 15,
+      "true": 10,
+      "abs_error": 5
+    },
+    {
+      "sample_id": "w07_push_up_8298",
+      "exercise": "push_up",
+      "predicted": 11,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w07_shoulder_press_12975",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w07_shoulder_press_15036",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w07_shoulder_press_22796",
+      "exercise": "shoulder_press",
+      "predicted": 8,
+      "true": 10,
+      "abs_error": 2
+    },
+    {
+      "sample_id": "w07_squat_2750",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w07_squat_4482",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w07_squat_5659",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w08_biceps_curl_36541",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w08_biceps_curl_37732",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w08_biceps_curl_40065",
+      "exercise": "biceps_curl",
+      "predicted": 11,
+      "true": 11,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w08_lunge_41398",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w08_lunge_43294",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w08_lunge_44711",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w08_push_up_16727",
+      "exercise": "push_up",
+      "predicted": 4,
+      "true": 10,
+      "abs_error": 6
+    },
+    {
+      "sample_id": "w08_push_up_5133",
+      "exercise": "push_up",
+      "predicted": 2,
+      "true": 10,
+      "abs_error": 8
+    },
+    {
+      "sample_id": "w08_push_up_6166",
+      "exercise": "push_up",
+      "predicted": 1,
+      "true": 10,
+      "abs_error": 9
+    },
+    {
+      "sample_id": "w08_shoulder_press_18542",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w08_shoulder_press_19674",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w08_shoulder_press_20860",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w08_squat_1978",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w08_squat_3006",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w08_squat_4239",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w09_biceps_curl_82836",
+      "exercise": "biceps_curl",
+      "predicted": 14,
+      "true": 14,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w09_biceps_curl_85581",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w09_biceps_curl_91110",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w09_lunge_29726",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w09_lunge_32564",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w09_lunge_38005",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w09_push_up_12843",
+      "exercise": "push_up",
+      "predicted": 8,
+      "true": 10,
+      "abs_error": 2
+    },
+    {
+      "sample_id": "w09_push_up_14161",
+      "exercise": "push_up",
+      "predicted": 8,
+      "true": 10,
+      "abs_error": 2
+    },
+    {
+      "sample_id": "w09_push_up_15442",
+      "exercise": "push_up",
+      "predicted": 17,
+      "true": 10,
+      "abs_error": 7
+    },
+    {
+      "sample_id": "w09_shoulder_press_17462",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w09_shoulder_press_19300",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w09_shoulder_press_27827",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w09_squat_11469",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w09_squat_3755",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w09_squat_7836",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w10_biceps_curl_63823",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w10_biceps_curl_69635",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w10_biceps_curl_70875",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w10_lunge_26349",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w10_lunge_28172",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w10_lunge_29816",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w10_push_up_11703",
+      "exercise": "push_up",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w10_push_up_13002",
+      "exercise": "push_up",
+      "predicted": 8,
+      "true": 10,
+      "abs_error": 2
+    },
+    {
+      "sample_id": "w10_push_up_6285",
+      "exercise": "push_up",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w10_shoulder_press_17935",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w10_shoulder_press_22543",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w10_shoulder_press_24121",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w10_squat_2704",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w10_squat_3761",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w10_squat_4850",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w11_biceps_curl_50125",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w11_biceps_curl_51945",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w11_biceps_curl_53350",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w11_lunge_24818",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w11_lunge_26730",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w11_lunge_29686",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w11_push_up_11552",
+      "exercise": "push_up",
+      "predicted": 2,
+      "true": 10,
+      "abs_error": 8
+    },
+    {
+      "sample_id": "w11_push_up_14616",
+      "exercise": "push_up",
+      "predicted": 7,
+      "true": 10,
+      "abs_error": 3
+    },
+    {
+      "sample_id": "w11_push_up_9936",
+      "exercise": "push_up",
+      "predicted": 2,
+      "true": 10,
+      "abs_error": 8
+    },
+    {
+      "sample_id": "w11_shoulder_press_16770",
+      "exercise": "shoulder_press",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w11_shoulder_press_20375",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w11_shoulder_press_22987",
+      "exercise": "shoulder_press",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w11_squat_3062",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w11_squat_5889",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w11_squat_8727",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w12_biceps_curl_70103",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w12_lunge_22081",
+      "exercise": "lunge",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w12_lunge_24908",
+      "exercise": "lunge",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w12_lunge_28118",
+      "exercise": "lunge",
+      "predicted": 8,
+      "true": 10,
+      "abs_error": 2
+    },
+    {
+      "sample_id": "w12_push_up_10994",
+      "exercise": "push_up",
+      "predicted": 2,
+      "true": 10,
+      "abs_error": 8
+    },
+    {
+      "sample_id": "w12_push_up_12370",
+      "exercise": "push_up",
+      "predicted": 0,
+      "true": 10,
+      "abs_error": 10
+    },
+    {
+      "sample_id": "w12_push_up_13776",
+      "exercise": "push_up",
+      "predicted": 0,
+      "true": 10,
+      "abs_error": 10
+    },
+    {
+      "sample_id": "w12_shoulder_press_14934",
+      "exercise": "shoulder_press",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w12_shoulder_press_17592",
+      "exercise": "shoulder_press",
+      "predicted": 7,
+      "true": 10,
+      "abs_error": 3
+    },
+    {
+      "sample_id": "w12_shoulder_press_20678",
+      "exercise": "shoulder_press",
+      "predicted": 8,
+      "true": 10,
+      "abs_error": 2
+    },
+    {
+      "sample_id": "w12_squat_5812",
+      "exercise": "squat",
+      "predicted": 0,
+      "true": 10,
+      "abs_error": 10
+    },
+    {
+      "sample_id": "w12_squat_7213",
+      "exercise": "squat",
+      "predicted": 0,
+      "true": 10,
+      "abs_error": 10
+    },
+    {
+      "sample_id": "w12_squat_8965",
+      "exercise": "squat",
+      "predicted": 0,
+      "true": 10,
+      "abs_error": 10
+    },
+    {
+      "sample_id": "w13_biceps_curl_55781",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w13_biceps_curl_57079",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w13_biceps_curl_58786",
+      "exercise": "biceps_curl",
+      "predicted": 12,
+      "true": 12,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w13_lunge_23865",
+      "exercise": "lunge",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w13_lunge_26003",
+      "exercise": "lunge",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w13_lunge_29792",
+      "exercise": "lunge",
+      "predicted": 7,
+      "true": 10,
+      "abs_error": 3
+    },
+    {
+      "sample_id": "w13_push_up_10513",
+      "exercise": "push_up",
+      "predicted": 6,
+      "true": 10,
+      "abs_error": 4
+    },
+    {
+      "sample_id": "w13_push_up_12415",
+      "exercise": "push_up",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w13_push_up_15326",
+      "exercise": "push_up",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w13_shoulder_press_17529",
+      "exercise": "shoulder_press",
+      "predicted": 8,
+      "true": 10,
+      "abs_error": 2
+    },
+    {
+      "sample_id": "w13_shoulder_press_19536",
+      "exercise": "shoulder_press",
+      "predicted": 4,
+      "true": 10,
+      "abs_error": 6
+    },
+    {
+      "sample_id": "w13_shoulder_press_22298",
+      "exercise": "shoulder_press",
+      "predicted": 6,
+      "true": 10,
+      "abs_error": 4
+    },
+    {
+      "sample_id": "w13_squat_5487",
+      "exercise": "squat",
+      "predicted": 4,
+      "true": 10,
+      "abs_error": 6
+    },
+    {
+      "sample_id": "w13_squat_6920",
+      "exercise": "squat",
+      "predicted": 1,
+      "true": 10,
+      "abs_error": 9
+    },
+    {
+      "sample_id": "w13_squat_9238",
+      "exercise": "squat",
+      "predicted": 2,
+      "true": 10,
+      "abs_error": 8
+    },
+    {
+      "sample_id": "w14_biceps_curl_33305",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w14_biceps_curl_34493",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w14_biceps_curl_35770",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w14_lunge_40789",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w14_lunge_44003",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w14_lunge_45380",
+      "exercise": "lunge",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w14_push_up_5592",
+      "exercise": "push_up",
+      "predicted": 8,
+      "true": 10,
+      "abs_error": 2
+    },
+    {
+      "sample_id": "w14_push_up_6584",
+      "exercise": "push_up",
+      "predicted": 8,
+      "true": 10,
+      "abs_error": 2
+    },
+    {
+      "sample_id": "w14_push_up_7960",
+      "exercise": "push_up",
+      "predicted": 5,
+      "true": 10,
+      "abs_error": 5
+    },
+    {
+      "sample_id": "w14_shoulder_press_10602",
+      "exercise": "shoulder_press",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w14_shoulder_press_13788",
+      "exercise": "shoulder_press",
+      "predicted": 8,
+      "true": 10,
+      "abs_error": 2
+    },
+    {
+      "sample_id": "w14_shoulder_press_9071",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w14_squat_1626",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w14_squat_2938",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w14_squat_4660",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w15_biceps_curl_44319",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w15_biceps_curl_45345",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w15_biceps_curl_46597",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w15_lunge_19631",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w15_lunge_21915",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w15_lunge_25332",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w15_push_up_10564",
+      "exercise": "push_up",
+      "predicted": 7,
+      "true": 10,
+      "abs_error": 3
+    },
+    {
+      "sample_id": "w15_push_up_11887",
+      "exercise": "push_up",
+      "predicted": 16,
+      "true": 10,
+      "abs_error": 6
+    },
+    {
+      "sample_id": "w15_push_up_13469",
+      "exercise": "push_up",
+      "predicted": 11,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w15_shoulder_press_14562",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w15_shoulder_press_16179",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w15_shoulder_press_17945",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w15_squat_4078",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w15_squat_7004",
+      "exercise": "squat",
+      "predicted": 7,
+      "true": 10,
+      "abs_error": 3
+    },
+    {
+      "sample_id": "w15_squat_9295",
+      "exercise": "squat",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w16_biceps_curl_60804",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w16_biceps_curl_63421",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w16_biceps_curl_66033",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w16_lunge_26293",
+      "exercise": "lunge",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w16_lunge_28479",
+      "exercise": "lunge",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w16_lunge_31545",
+      "exercise": "lunge",
+      "predicted": 8,
+      "true": 10,
+      "abs_error": 2
+    },
+    {
+      "sample_id": "w16_push_up_11735",
+      "exercise": "push_up",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w16_push_up_13696",
+      "exercise": "push_up",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w16_push_up_15543",
+      "exercise": "push_up",
+      "predicted": 8,
+      "true": 10,
+      "abs_error": 2
+    },
+    {
+      "sample_id": "w16_push_up_9557",
+      "exercise": "push_up",
+      "predicted": 2,
+      "true": 10,
+      "abs_error": 8
+    },
+    {
+      "sample_id": "w16_shoulder_press_17903",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w16_shoulder_press_19977",
+      "exercise": "shoulder_press",
+      "predicted": 8,
+      "true": 10,
+      "abs_error": 2
+    },
+    {
+      "sample_id": "w16_shoulder_press_22128",
+      "exercise": "shoulder_press",
+      "predicted": 8,
+      "true": 10,
+      "abs_error": 2
+    },
+    {
+      "sample_id": "w16_squat_3772",
+      "exercise": "squat",
+      "predicted": 0,
+      "true": 10,
+      "abs_error": 10
+    },
+    {
+      "sample_id": "w16_squat_5819",
+      "exercise": "squat",
+      "predicted": 1,
+      "true": 10,
+      "abs_error": 9
+    },
+    {
+      "sample_id": "w16_squat_7413",
+      "exercise": "squat",
+      "predicted": 0,
+      "true": 10,
+      "abs_error": 10
+    },
+    {
+      "sample_id": "w17_biceps_curl_45270",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w17_biceps_curl_47995",
+      "exercise": "biceps_curl",
+      "predicted": 11,
+      "true": 11,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w17_biceps_curl_49339",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w17_lunge_20035",
+      "exercise": "lunge",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w17_lunge_21841",
+      "exercise": "lunge",
+      "predicted": 7,
+      "true": 10,
+      "abs_error": 3
+    },
+    {
+      "sample_id": "w17_lunge_24253",
+      "exercise": "lunge",
+      "predicted": 11,
+      "true": 14,
+      "abs_error": 3
+    },
+    {
+      "sample_id": "w17_push_up_10018",
+      "exercise": "push_up",
+      "predicted": 6,
+      "true": 10,
+      "abs_error": 4
+    },
+    {
+      "sample_id": "w17_push_up_11633",
+      "exercise": "push_up",
+      "predicted": 3,
+      "true": 9,
+      "abs_error": 6
+    },
+    {
+      "sample_id": "w17_push_up_12902",
+      "exercise": "push_up",
+      "predicted": 8,
+      "true": 12,
+      "abs_error": 4
+    },
+    {
+      "sample_id": "w17_push_up_8684",
+      "exercise": "push_up",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w17_shoulder_press_15687",
+      "exercise": "shoulder_press",
+      "predicted": 4,
+      "true": 10,
+      "abs_error": 6
+    },
+    {
+      "sample_id": "w17_shoulder_press_17120",
+      "exercise": "shoulder_press",
+      "predicted": 3,
+      "true": 10,
+      "abs_error": 7
+    },
+    {
+      "sample_id": "w17_shoulder_press_18757",
+      "exercise": "shoulder_press",
+      "predicted": 7,
+      "true": 11,
+      "abs_error": 4
+    },
+    {
+      "sample_id": "w17_squat_2295",
+      "exercise": "squat",
+      "predicted": 0,
+      "true": 11,
+      "abs_error": 11
+    },
+    {
+      "sample_id": "w17_squat_4028",
+      "exercise": "squat",
+      "predicted": 0,
+      "true": 7,
+      "abs_error": 7
+    },
+    {
+      "sample_id": "w17_squat_5285",
+      "exercise": "squat",
+      "predicted": 0,
+      "true": 11,
+      "abs_error": 11
+    },
+    {
+      "sample_id": "w17_squat_6606",
+      "exercise": "squat",
+      "predicted": 0,
+      "true": 10,
+      "abs_error": 10
+    },
+    {
+      "sample_id": "w18_biceps_curl_102140",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w18_biceps_curl_88761",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w18_biceps_curl_96987",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w18_lunge_30819",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w18_lunge_38546",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w18_lunge_45218",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w18_push_up_13444",
+      "exercise": "push_up",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w18_push_up_17455",
+      "exercise": "push_up",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w18_push_up_9629",
+      "exercise": "push_up",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w18_shoulder_press_22387",
+      "exercise": "shoulder_press",
+      "predicted": 6,
+      "true": 9,
+      "abs_error": 3
+    },
+    {
+      "sample_id": "w18_shoulder_press_26753",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w18_shoulder_press_29212",
+      "exercise": "shoulder_press",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w18_squat_1785",
+      "exercise": "squat",
+      "predicted": 0,
+      "true": 10,
+      "abs_error": 10
+    },
+    {
+      "sample_id": "w18_squat_3566",
+      "exercise": "squat",
+      "predicted": 7,
+      "true": 10,
+      "abs_error": 3
+    },
+    {
+      "sample_id": "w18_squat_7663",
+      "exercise": "squat",
+      "predicted": 4,
+      "true": 10,
+      "abs_error": 6
+    },
+    {
+      "sample_id": "w19_biceps_curl_43830",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w19_biceps_curl_45120",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w19_biceps_curl_48102",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w19_biceps_curl_49214",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w19_lunge_19930",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w19_lunge_21726",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w19_lunge_23396",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w19_push_up_11910",
+      "exercise": "push_up",
+      "predicted": 3,
+      "true": 7,
+      "abs_error": 4
+    },
+    {
+      "sample_id": "w19_push_up_5420",
+      "exercise": "push_up",
+      "predicted": 1,
+      "true": 10,
+      "abs_error": 9
+    },
+    {
+      "sample_id": "w19_push_up_7845",
+      "exercise": "push_up",
+      "predicted": 4,
+      "true": 10,
+      "abs_error": 6
+    },
+    {
+      "sample_id": "w19_shoulder_press_14571",
+      "exercise": "shoulder_press",
+      "predicted": 0,
+      "true": 10,
+      "abs_error": 10
+    },
+    {
+      "sample_id": "w19_shoulder_press_16246",
+      "exercise": "shoulder_press",
+      "predicted": 4,
+      "true": 10,
+      "abs_error": 6
+    },
+    {
+      "sample_id": "w19_shoulder_press_17778",
+      "exercise": "shoulder_press",
+      "predicted": 2,
+      "true": 10,
+      "abs_error": 8
+    },
+    {
+      "sample_id": "w19_squat_1014",
+      "exercise": "squat",
+      "predicted": 0,
+      "true": 10,
+      "abs_error": 10
+    },
+    {
+      "sample_id": "w19_squat_2469",
+      "exercise": "squat",
+      "predicted": 0,
+      "true": 10,
+      "abs_error": 10
+    },
+    {
+      "sample_id": "w19_squat_3869",
+      "exercise": "squat",
+      "predicted": 0,
+      "true": 10,
+      "abs_error": 10
+    },
+    {
+      "sample_id": "w20_biceps_curl_67093",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w20_biceps_curl_69715",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w20_biceps_curl_72723",
+      "exercise": "biceps_curl",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w20_lunge_20425",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w20_lunge_22940",
+      "exercise": "lunge",
+      "predicted": 9,
+      "true": 9,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w20_lunge_26392",
+      "exercise": "lunge",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w20_push_up_10093",
+      "exercise": "push_up",
+      "predicted": 9,
+      "true": 10,
+      "abs_error": 1
+    },
+    {
+      "sample_id": "w20_push_up_12592",
+      "exercise": "push_up",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w20_push_up_15603",
+      "exercise": "push_up",
+      "predicted": 10,
+      "true": 10,
+      "abs_error": 0
+    },
+    {
+      "sample_id": "w20_squat_2178",
+      "exercise": "squat",
+      "predicted": 2,
+      "true": 10,
+      "abs_error": 8
+    },
+    {
+      "sample_id": "w20_squat_4027",
+      "exercise": "squat",
+      "predicted": 0,
+      "true": 10,
+      "abs_error": 10
+    },
+    {
+      "sample_id": "w20_squat_6599",
+      "exercise": "squat",
+      "predicted": 1,
+      "true": 10,
+      "abs_error": 9
+    }
+  ]
+}

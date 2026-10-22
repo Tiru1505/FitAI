@@ -1,0 +1,56 @@
+{
+  "inputs": [
+    "ml\\data\\landmarks\\mmfit.csv"
+  ],
+  "sequence_length": 60,
+  "stride": 15,
+  "feature_set": "xyv99",
+  "exercise_labels": [
+    "biceps_curl",
+    "lunge",
+    "push_up",
+    "shoulder_press",
+    "squat"
+  ],
+  "form_labels": [
+    "correct"
+  ],
+  "participants": {
+    "train": [
+      "w01",
+      "w02",
+      "w03",
+      "w04",
+      "w06",
+      "w07",
+      "w08",
+      "w09",
+      "w10",
+      "w11",
+      "w16",
+      "w17",
+      "w18"
+    ],
+    "val": [
+      "w14",
+      "w15",
+      "w19"
+    ],
+    "test": [
+      "w00",
+      "w05",
+      "w12",
+      "w13",
+      "w20"
+    ]
+  },
+  "windows": {
+    "train": 7786,
+    "val": 1862,
+    "test": 2472
+  },
+  "samples": 310,
+  "windows_kept": 12120,
+  "windows_dropped_low_visibility": 0,
+  "frames_low_visibility": 0
+}

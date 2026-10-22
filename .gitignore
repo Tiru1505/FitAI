@@ -6,13 +6,16 @@ __pycache__/
 backend/.env
 backend/*.db
 
-# Trained models and datasets (large / may contain participant data)
-backend/trained_models/*.keras
-backend/trained_models/*.meta.json
+# The exported model is committed so the repo runs without retraining (~1.6 MB).
+# Datasets are not: they are large and may contain participant data.
 ml/data/**
 !ml/data/README.md
 !ml/data/templates/**
-ml/results/
+# Results: metrics, logs and plots are committed as evidence; the bulky
+# intermediates (windowed datasets, duplicate model weights) are not.
+ml/results/**/sequences.npz
+ml/results/**/baseline.joblib
+ml/results/**/*.keras
 ml/models/
 
 # Frontend
