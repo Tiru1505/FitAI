@@ -47,9 +47,25 @@ rows), pseudonymous IDs, secure storage, and no video retention unless consented
 
 ## C. Nutrition data
 
-`backend/app/data/foods.csv` contains 147 foods from **USDA FoodData Central, SR Legacy (April 2018)**,
-which is public domain. It was built with `backend/scripts/build_foods_from_usda.py`, and every row
-keeps its USDA FDC ID and description. Energy, protein, carbohydrate, fat and fibre come from USDA,
-scaled to a USDA household portion. Meal categories and diet/allergen labels are assigned by FitAI,
-because SR Legacy has none. See `backend/app/data/README.md`. It is used for filtering only and is
-not a deep-learning training dataset.
+`backend/app/data/foods.csv` contains 299 foods from **USDA FoodData Central, SR Legacy (April 2018)**,
+which is public domain. Every row keeps its USDA FDC ID and description. Energy, protein,
+carbohydrate, fat and fibre come from USDA, scaled to a USDA household portion. Meal categories and
+diet/allergen labels are assigned by FitAI, because SR Legacy has none. See
+`backend/app/data/README.md`. It is used for filtering and meal planning only, and is not a
+deep-learning training dataset.
+
+Two scripts build it, and the split between them matters for provenance:
+
+| Script | Rows | How foods are chosen | How labels are set |
+|---|---|---|---|
+| `backend/scripts/build_foods_from_usda.py` | first 147 | named one at a time | hand-written per food |
+| `backend/scripts/expand_foods_from_usda.py` | remaining 152 | searched from a list of common food names, preferring the plainest preparation (cooked without salt; never battered, fried or branded) | keyword rules over the USDA description |
+
+The expansion exists because the planner needs variety, and hand-labelling several hundred foods is
+not practical. Its keyword rules are deliberately conservative: a food keeps an allergen unless it is
+clearly free of it, and nothing processed is marked gluten-free. The curated 147 are authoritative and
+are copied through unchanged, so re-running the expansion cannot alter them.
+
+The food table is **not** a diet-plan dataset, and none was needed: the planner computes targets from
+the user's own body measurements (Mifflin-St Jeor, then WHO BMI bands) and fills meals from this
+table, so there are no plans to learn from and nothing about the user is sent anywhere.

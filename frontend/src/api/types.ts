@@ -240,6 +240,61 @@ export interface MealGuidance {
   disclaimer: string;
 }
 
+export interface PlanAlternative {
+  food_id: number;
+  name: string;
+  serving_size: string;
+  servings: number;
+  calories: number;
+}
+
+export interface PlannedItem {
+  food_id: number;
+  name: string;
+  serving_size: string;
+  servings: number;
+  role: string;
+  calories: number;
+  protein_g: number;
+  carbs_g: number;
+  fat_g: number;
+  fiber_g: number;
+  alternatives: PlanAlternative[];
+}
+
+export interface PlannedMeal {
+  key: string;
+  label: string;
+  target_calories: number;
+  items: PlannedItem[];
+  calories: number;
+  protein_g: number;
+  carbs_g: number;
+  fat_g: number;
+  fiber_g: number;
+}
+
+export interface DayPlan {
+  date: string;
+  meals: PlannedMeal[];
+  calories: number;
+  protein_g: number;
+  carbs_g: number;
+  fat_g: number;
+  fiber_g: number;
+}
+
+export interface DietPlan {
+  available: boolean;
+  reason: string | null;
+  body: { bmi: number | null; category: string | null; note: string };
+  targets: { calories: number; protein_g: number; carbs_g: number; fat_g: number; explanation: string } | null;
+  days: DayPlan[];
+  tips: string[];
+  applied_filters: { diet: string | null; exclude_allergens: string[] };
+  disclaimer: string;
+}
+
 export interface ModelDescription {
   available: boolean;
   status: string;

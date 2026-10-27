@@ -6,7 +6,8 @@ from pydantic import BaseModel, Field
 from app.api.deps import CurrentProfile, CurrentUser, DbSession
 from app.models import MealGuidance
 from app.schemas.common import Allergen, DietaryPreference, MealCategory
-from app.schemas.nutrition import FoodItemOut, FoodListOut, MealGuidanceOut
+from app.schemas.nutrition import DietPlanOut, FoodItemOut, FoodListOut, MealGuidanceOut
+from app.services import diet_planner as dp
 from app.services import nutrition_service as ns
 
 router = APIRouter(prefix="/api/nutrition", tags=["nutrition"])
@@ -38,17 +39,24 @@ class MealGuidanceRequest(BaseModel):
     exclude_allergens: list[Allergen] | None = Field(default=None, max_length=9)
 
 
+def _resolve_filters(profile, body: MealGuidanceRequest) -> tuple[str | None, list[str]]:
+    """The diet and allergen exclusions to apply: the request's overrides, else the profile's."""
+    prefs = profile.dietary_preferences or []
+    diet = body.diet or ("vegan" if "vegan" in prefs else "vegetarian" if "vegetarian" in prefs else None)
+    allergens = body.exclude_allergens if body.exclude_allergens is not None else (profile.allergies or [])
+    # A gluten-free preference is enforced by excluding wheat, which is how the food table marks it.
+    if "gluten_free" in prefs and "wheat" not in allergens:
+        allergens = [*allergens, "wheat"]
+    return diet, list(allergens)
+
+
 @router.post("/meal-guidance", response_model=MealGuidanceOut)
 def meal_guidance(body: MealGuidanceRequest, profile: CurrentProfile, db: DbSession) -> MealGuidanceOut:
     estimate = ns.estimate_calorie_range(
         profile.age, profile.sex, profile.height_cm, profile.weight_kg,
         profile.days_per_week, profile.goal, profile.health_flags or [],
     )  # fmt: skip
-    prefs = profile.dietary_preferences or []
-    diet = body.diet or ("vegan" if "vegan" in prefs else "vegetarian" if "vegetarian" in prefs else None)
-    allergens = body.exclude_allergens if body.exclude_allergens is not None else (profile.allergies or [])
-    if "gluten_free" in prefs and "wheat" not in allergens:
-        allergens = [*allergens, "wheat"]
+    diet, allergens = _resolve_filters(profile, body)
 
     suggestions: dict[str, list[FoodItemOut]] = {}
     for category in ("breakfast", "lunch", "dinner", "snack"):
@@ -80,3 +88,21 @@ def meal_guidance(body: MealGuidanceRequest, profile: CurrentProfile, db: DbSess
         professional_referral=bool(profile.health_flags),
         disclaimer=ns.DISCLAIMER,
     )
+
+
+class DietPlanRequest(MealGuidanceRequest):
+    days: int = Field(default=1, ge=1, le=7, description="1 for today, 7 for a week")
+
+
+@router.post("/diet-plan", response_model=DietPlanOut)
+def diet_plan(body: DietPlanRequest, profile: CurrentProfile, db: DbSession) -> DietPlanOut:
+    """A day or week of meals sized to the profile's calorie and protein targets.
+
+    Not stored: the plan is a pure function of the profile, the filters and the date, so it is
+    rebuilt on request rather than kept as another copy of the user's health data.
+    """
+    diet, allergens = _resolve_filters(profile, body)
+    plan = dp.build_plan(
+        db, profile, diet=diet, exclude_allergens=allergens, start=date.today(), days=body.days,
+    )  # fmt: skip
+    return DietPlanOut.model_validate(plan, from_attributes=True)

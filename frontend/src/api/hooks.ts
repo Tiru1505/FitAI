@@ -3,7 +3,7 @@ import axios from "axios";
 
 import { api } from "./client";
 import type {
-  Exercise, FoodList, MealGuidance, ModelStatus, Notices, Plan, ProfileInput, ProgressHistory, ProgressSummary,
+  DietPlan, Exercise, FoodList, MealGuidance, ModelStatus, Notices, Plan, ProfileInput, ProgressHistory, ProgressSummary,
   SessionCompleteResponse, TodayWorkout, User, WorkoutSession,
 } from "./types";
 
@@ -113,6 +113,13 @@ export function useCompleteSession() {
 export function useMealGuidance() {
   return useMutation({
     mutationFn: () => api.post<MealGuidance>("/api/nutrition/meal-guidance", {}).then((r) => r.data),
+  });
+}
+
+export function useDietPlan() {
+  return useMutation({
+    mutationFn: (body: { days: number }) =>
+      api.post<DietPlan>("/api/nutrition/diet-plan", body).then((r) => r.data),
   });
 }
 

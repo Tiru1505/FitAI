@@ -23,7 +23,7 @@ webcam ─► MediaPipe Pose Landmarker (WASM, local)
                                                         └─ BiLSTM exercise / form classifier (if trained)
           ◄── {exercise, confidence, repetition_count, form_status, feedback, visible, ...}
 
-REST: auth · profile · rule-based recommender · sessions · adaptive coach · progress · nutrition
+REST: auth · profile · rule-based recommender · sessions · adaptive coach · progress · nutrition · diet plan
 DB:   SQLAlchemy + Alembic (SQLite by default, PostgreSQL supported)
 ```
 
@@ -35,6 +35,7 @@ DB:   SQLAlchemy + Alembic (SQLite by default, PostgreSQL supported)
 | Repetition counting | Joint angles + moving average + finite-state machine, with per-session threshold calibration | `backend/app/services/rep_counter.py` |
 | Workout recommendation | Rule-based baseline (optional ML comparison) | `backend/app/services/recommender_service.py`, `ml/scripts/train_recommender.py` |
 | Adaptive coaching | Configurable score-based policy | `backend/app/services/adaptive_coach.py` |
+| Diet planning | BMI/BMR targets + role-based meal filling from the USDA food table | `backend/app/services/diet_planner.py` |
 
 **The frontend never makes predictions.** Every exercise label, rep count, form status, plan, score and
 progress value comes from FastAPI. Until a BiLSTM model is trained and exported, the API reports
@@ -97,7 +98,8 @@ cd backend
 
 The suite covers the repetition counter (phase order, partial reps, jitter, occlusion reset, mirrored
 shoulder press), form rules, adaptation rules and score weighting, the recommender's constraint
-satisfaction, nutrition safety limits, API validation and authorization, a full WebSocket session with
+satisfaction, nutrition safety limits, the diet planner (health boundary, diet and allergen filters,
+calorie accuracy, reproducibility), API validation and authorization, a full WebSocket session with
 adaptation, and data deletion.
 
 Frontend type-check and build: `cd frontend && npm run build`.
@@ -116,7 +118,10 @@ Frontend type-check and build: `cd frontend && npm run build`.
 4. **Progress:** charts for session scores, reps per exercise, form issue frequency, optional weight
    log, adaptation history and session history.
 5. **Nutrition:** approximate calorie range (withheld for minors and sensitive health flags), protein
-   guidance, meal ideas filtered by diet and allergens, and a food explorer.
+   guidance, meal ideas filtered by diet and allergens, and a food explorer. **Your diet plan**
+   builds a day or a week of meals: BMI, calorie and macro targets from your profile, then
+   breakfast, lunch, dinner and snacks filled with real foods and portions, each tagged with the
+   role it plays and a few same-role swaps. Withheld wherever the calorie range is withheld.
 6. **Settings & privacy:** privacy notice, model status, and **delete data** (keep the login or delete
    the account too). The researcher **dataset collection tool** records landmarks from consenting
    volunteers and downloads them as CSV, entirely in the browser.
@@ -138,6 +143,45 @@ optimal values. If a session has no live form data, the remaining weights are re
 | Completion < 60% and difficulty ≥ 4 | −2 reps (floor), +15 s rest |
 | ≥ 2 missed planned sessions in 7 days | −1 set per exercise (at most once per week) + consistency reminder |
 | Same form error in the last 3 results | Practice mode (slow tempo, technique focus) |
+
+## Diet planning
+
+A day or a week of meals, sized to the user's own measurements. There is no model and no training
+data here: the targets are computed from the profile, and the meals are assembled from the USDA food
+table. The planner is deliberately transparent rather than optimal, so every portion can be explained.
+
+```
+BMI          = weight_kg / height_m²                       → WHO band (descriptive only)
+calories     = midpoint of the Mifflin-St Jeor range already used for nutrition guidance
+protein_g    = weight_kg × 1.8 (muscle gain) / 1.5 (endurance) / 1.4 (otherwise), capped at 35% of energy
+fat_g        = 27.5% of calories
+carbs_g      = whatever energy is left
+```
+
+Each day's calories are split breakfast 25% · lunch 30% · dinner 30% · snacks 15%. Within a meal the
+planner fills four roles in order, and the **last role is the balancer** — it is sized to close
+whatever calorie gap the others leave:
+
+| Meal | Roles, in order |
+|---|---|
+| Breakfast | protein → fruit/veg → healthy fat → **carbohydrate** |
+| Lunch, dinner | protein → vegetable → healthy fat → **carbohydrate** |
+| Snacks | fruit/veg → protein → **healthy fat** |
+
+Roles are scored from the food's own macros, not from a category column the data does not have.
+Portions are shown in half servings between 0.5 and 3, so a day lands **near** its target rather than
+exactly on it; both numbers are always on screen. Each item carries the role it was chosen for and a
+few same-role swaps, which pass through the same diet and allergen filters as the item they replace.
+
+Health boundary: the plan is withheld wherever the calorie range is withheld — under-18s, pregnancy,
+eating-disorder history, chronic conditions, special diets, or an incomplete profile. For those
+flags **BMI is withheld too**, because a weight-status number is the one thing not to show someone
+with an eating-disorder history. Plans are not stored: they are a pure function of the profile, the
+filters and the date, so they are rebuilt on request rather than kept as another copy of health data.
+
+```bash
+cd backend && .venv\Scripts\python -m pytest tests/test_diet_planner.py -q
+```
 
 ## Model training and evaluation
 
@@ -174,9 +218,12 @@ No performance figures in this repository are real until you produce them.
 - Rule-based form checks are 2D heuristics and depend on camera angle. Some apply only to front or
   side views, and thresholds need tuning against labelled recordings.
 - Recognition and form models need a real, consenting, multi-participant dataset. None is included.
-- Nutrition values come from USDA FoodData Central SR Legacy (147 generic foods). Diet and allergen
+- Nutrition values come from USDA FoodData Central SR Legacy (299 generic foods). Diet and allergen
   labels are assigned by FitAI, not USDA, and are not allergy-safety guarantees. Indian prepared
   dishes are represented by their base ingredients.
+- The diet planner sizes portions in half servings, so a day's total lands within about 15% of the
+  calorie target rather than exactly on it. Both the target and the total are shown. It is general
+  educational guidance, not a prescribed diet.
 - Only the five v1 exercises are supported: squat, lunge, push-up, biceps curl, shoulder press.
 
 ## References

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { errorMessage } from "../api/client";
 import { useFoods, useMealGuidance, type FoodFilters } from "../api/hooks";
 import { ALLERGENS, DIETS, MEAL_CATEGORIES, label, type FoodItem } from "../api/types";
+import DietPlanCard from "../components/DietPlanCard";
 import { AppleIcon, SparkIcon } from "../components/icons";
 import { Alert, Button, Card, ChipToggle, Field, Input, PageHeader, Select, Spinner } from "../components/ui";
 
@@ -99,6 +100,8 @@ export default function NutritionPage() {
           </div>
         )}
       </Card>
+
+      <DietPlanCard />
 
       <Card title="Food explorer" icon={<AppleIcon />}>
         <div className="mb-4 grid gap-4 md:grid-cols-4">
