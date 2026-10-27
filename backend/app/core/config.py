@@ -38,6 +38,15 @@ class Settings(BaseSettings):
     sequence_length: int = 60
     classify_every_n_frames: int = 5
     invisible_frames_before_reset: int = 15
+
+    # --- Repetition-counter calibration --------------------------------------
+    # Thresholds are derived from the user's own range of motion instead of fixed angles,
+    # so counting survives a change of camera angle, body proportions or mobility.
+    calibrate_rep_counter: bool = True
+    calibration_warmup_samples: int = 45
+    calibration_min_range_degrees: float = 25.0
+    calibration_start_fraction: float = 0.15
+    calibration_target_fraction: float = 0.35
     max_frames_per_request: int = 900
 
     # --- Session score (weights are configurable project parameters) ---------

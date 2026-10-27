@@ -406,6 +406,12 @@ function ActiveStage({ session, exercises, totals, onTotals, onFinish }: {
                 Recording set
               </span>
             )}
+            {setActive && analysis && !analysis.calibrated && (
+              <span className="absolute left-3 top-11 z-10 flex items-center gap-2 rounded-full bg-plum-500/80 px-2.5 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                <span className="h-2 w-2 animate-pulse rounded-full bg-white/90" />
+                Learning your range — do a full first rep
+              </span>
+            )}
             <video ref={videoRef} className="absolute inset-0 h-full w-full -scale-x-100 object-cover" playsInline muted />
             <canvas ref={canvasRef} className="absolute inset-0 h-full w-full -scale-x-100 object-cover" />
             {cameraState !== "on" && (
@@ -539,6 +545,8 @@ function ActiveStage({ session, exercises, totals, onTotals, onFinish }: {
                 <dt className="text-beige-400">Joint angle</dt><dd className="tabular-nums">{analysis.angle == null ? "—" : `${analysis.angle}°`}</dd>
                 <dt className="text-beige-400">Partial reps</dt><dd className="tabular-nums">{analysis.partial_repetitions}</dd>
                 <dt className="text-beige-400">Form score</dt><dd>{pct(analysis.form_score)}</dd>
+                <dt className="text-beige-400">Calibration</dt>
+                <dd>{analysis.calibrated ? "Matched to your range" : "Learning…"}</dd>
                 <dt className="text-beige-400">Server time</dt><dd className="tabular-nums">{analysis.processing_ms.toFixed(1)} ms</dd>
                 <dt className="text-beige-400">Dropped frames</dt><dd className="tabular-nums">{dropped.captured ? pct(dropped.dropped / dropped.captured) : "—"}</dd>
               </dl>

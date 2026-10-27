@@ -15,7 +15,7 @@ from app.core.config import Settings
 from app.services import pose_service as ps
 from app.services.exercise_classifier import ModelRegistry, Prediction
 from app.services.form_feedback import FormAnalyzer, message_for
-from app.services.rep_counter import make_rep_counter
+from app.services.rep_counter import CalibrationSettings, make_rep_counter
 
 CORRECT_FORM_LABELS = {"correct", "good", "correct_form"}
 
@@ -26,7 +26,16 @@ class LiveAnalyzer:
         self.registry = registry
         self.settings = settings
         self.rep_counter = make_rep_counter(
-            expected_exercise, settings.min_landmark_visibility, settings.invisible_frames_before_reset
+            expected_exercise,
+            settings.min_landmark_visibility,
+            settings.invisible_frames_before_reset,
+            CalibrationSettings(
+                enabled=settings.calibrate_rep_counter,
+                warmup_samples=settings.calibration_warmup_samples,
+                min_range_degrees=settings.calibration_min_range_degrees,
+                start_fraction=settings.calibration_start_fraction,
+                target_fraction=settings.calibration_target_fraction,
+            ),
         )
         self.form = FormAnalyzer(expected_exercise, settings.min_landmark_visibility)
         self.features: deque[np.ndarray] = deque(maxlen=settings.sequence_length)
@@ -127,6 +136,7 @@ class LiveAnalyzer:
             "active_errors": frame_form.active_errors,
             "feedback": feedback,
             "visible": rep.visible,
+            "calibrated": rep.calibrated,
             "form_score": self.form.summary()["form_score"],
         }
 
@@ -137,6 +147,11 @@ class LiveAnalyzer:
                 form["error_counts"].setdefault(f"model:{label}", count)
         return {
             "exercise": self.expected_exercise,
+            "calibrated": self.rep_counter.calibrated,
+            "calibrated_thresholds": (
+                {"start": self.rep_counter.config.start_threshold, "target": self.rep_counter.config.target_threshold}
+                if self.rep_counter.calibrated else None
+            ),
             "repetitions": self.rep_counter.count,
             "partial_repetitions": self.rep_counter.partial_count,
             **form,

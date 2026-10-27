@@ -146,6 +146,38 @@ increasing order of merit:
 
 Raw grid-search output: `ml/results/rep_counter_tuning.json`.
 
+### 4c. Per-session calibration (implemented)
+
+Option 2 above was implemented rather than adopting the tuned constants. The counter now watches the
+user's own joint angle, takes the 5th and 95th percentiles of what it has seen, and places the start
+and target thresholds at 15% and 35% into that range. It refuses to calibrate below a 25° range, so a
+stationary person cannot produce thresholds a twitch would satisfy, and it only re-derives thresholds
+between repetitions, never mid-rep. When calibration first completes it replays the buffered angles so
+the warm-up repetitions are not lost.
+
+Evaluated on the same held-out workouts (70 sets, `ml/scripts/eval_calibration.py`):
+
+| Strategy | MAE | Within ±1 | Sets counted as zero | Fitted on this data? |
+|---|---|---|---|---|
+| Hand-set thresholds | 2.486 | 64.3% | 6 | no |
+| Tuned fixed thresholds (§4b) | 1.114 | 82.9% | 3 | yes — on the training workouts |
+| **Per-session calibration** | **0.814** | **84.3%** | **0** | **no** |
+
+Per exercise, MAE hand-set → calibrated: squat 5.53 → **1.40**, shoulder press 3.42 → **0.17**,
+push-up 2.67 → **1.67**, lunge 0.67 → **0.60**, biceps curl 0.00 → **0.00**.
+
+Two points worth making in a review. First, the adaptive method beats the thresholds that were fitted
+to this dataset, while fitting nothing itself — it is not benefiting from having seen these people.
+Second, the six sets that previously counted **zero** repetitions are now all counted; that failure
+mode, where a user does a full set and the app records nothing, is the one most likely to make someone
+abandon the app.
+
+Known trade-off: calibration measures the range a person actually moves through, so a user who only
+ever half-squats will have half-squats counted as repetitions. From a single 2D camera, a shallow
+squat and a foreshortened deep squat are not distinguishable, so no threshold can separate them;
+partial repetitions are therefore judged relative to each user's own range rather than an absolute
+angle.
+
 ## 5. Live inference (from `workout_sessions.inference_stats`)
 
 | Metric | Value | Notes |

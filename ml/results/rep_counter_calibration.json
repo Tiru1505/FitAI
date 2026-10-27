@@ -1,0 +1,122 @@
+{
+  "squat": {
+    "hand-set": {
+      "n": 15,
+      "mae": 5.533,
+      "within_one_pct": 40.0,
+      "zero_count_sets": 4
+    },
+    "calibrated": {
+      "n": 15,
+      "mae": 1.4,
+      "within_one_pct": 66.7,
+      "zero_count_sets": 0
+    },
+    "tuned-fixed": {
+      "n": 15,
+      "mae": 2.4,
+      "within_one_pct": 60.0,
+      "zero_count_sets": 1
+    }
+  },
+  "lunge": {
+    "hand-set": {
+      "n": 15,
+      "mae": 0.667,
+      "within_one_pct": 86.7,
+      "zero_count_sets": 0
+    },
+    "calibrated": {
+      "n": 15,
+      "mae": 0.6,
+      "within_one_pct": 86.7,
+      "zero_count_sets": 0
+    },
+    "tuned-fixed": {
+      "n": 15,
+      "mae": 0.533,
+      "within_one_pct": 80.0,
+      "zero_count_sets": 0
+    }
+  },
+  "push_up": {
+    "hand-set": {
+      "n": 15,
+      "mae": 2.667,
+      "within_one_pct": 66.7,
+      "zero_count_sets": 2
+    },
+    "calibrated": {
+      "n": 15,
+      "mae": 1.667,
+      "within_one_pct": 73.3,
+      "zero_count_sets": 0
+    },
+    "tuned-fixed": {
+      "n": 15,
+      "mae": 2.067,
+      "within_one_pct": 80.0,
+      "zero_count_sets": 2
+    }
+  },
+  "biceps_curl": {
+    "hand-set": {
+      "n": 13,
+      "mae": 0,
+      "within_one_pct": 100.0,
+      "zero_count_sets": 0
+    },
+    "calibrated": {
+      "n": 13,
+      "mae": 0,
+      "within_one_pct": 100.0,
+      "zero_count_sets": 0
+    },
+    "tuned-fixed": {
+      "n": 13,
+      "mae": 0,
+      "within_one_pct": 100.0,
+      "zero_count_sets": 0
+    }
+  },
+  "shoulder_press": {
+    "hand-set": {
+      "n": 12,
+      "mae": 3.417,
+      "within_one_pct": 25.0,
+      "zero_count_sets": 0
+    },
+    "calibrated": {
+      "n": 12,
+      "mae": 0.167,
+      "within_one_pct": 100.0,
+      "zero_count_sets": 0
+    },
+    "tuned-fixed": {
+      "n": 12,
+      "mae": 0.25,
+      "within_one_pct": 100.0,
+      "zero_count_sets": 0
+    }
+  },
+  "_overall": {
+    "hand-set": {
+      "n": 70,
+      "mae": 2.486,
+      "within_one_pct": 64.3,
+      "zero_count_sets": 6
+    },
+    "tuned-fixed": {
+      "n": 70,
+      "mae": 1.114,
+      "within_one_pct": 82.9,
+      "zero_count_sets": 3
+    },
+    "calibrated": {
+      "n": 70,
+      "mae": 0.814,
+      "within_one_pct": 84.3,
+      "zero_count_sets": 0
+    }
+  }
+}

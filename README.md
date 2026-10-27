@@ -32,7 +32,7 @@ DB:   SQLAlchemy + Alembic (SQLite by default, PostgreSQL supported)
 | Pose extraction | MediaPipe Pose Landmarker (in browser; Python Tasks API for recorded videos) | `frontend/src/lib/pose.ts`, `ml/scripts/extract_landmarks.py` |
 | Exercise recognition | **Bidirectional LSTM** on 60-frame landmark windows (GRU as comparison) | `ml/scripts/train.py`, `backend/app/services/exercise_classifier.py` |
 | Form classification | BiLSTM/GRU per exercise + transparent geometric rules | `backend/app/services/form_feedback.py` |
-| Repetition counting | Joint angles + moving average + finite-state machine | `backend/app/services/rep_counter.py` |
+| Repetition counting | Joint angles + moving average + finite-state machine, with per-session threshold calibration | `backend/app/services/rep_counter.py` |
 | Workout recommendation | Rule-based baseline (optional ML comparison) | `backend/app/services/recommender_service.py`, `ml/scripts/train_recommender.py` |
 | Adaptive coaching | Configurable score-based policy | `backend/app/services/adaptive_coach.py` |
 

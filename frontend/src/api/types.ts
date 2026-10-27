@@ -275,6 +275,8 @@ export interface LiveAnalysis {
   active_errors: string[];
   feedback: string;
   visible: boolean;
+  /** False until the counter has learned this user's range of motion. */
+  calibrated: boolean;
   form_score: number | null;
   processing_ms: number;
   timestamp_ms: number | null;

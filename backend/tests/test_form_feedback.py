@@ -3,12 +3,13 @@ from app.services import pose_service as ps
 from app.services.exercise_classifier import ModelRegistry
 from app.services.form_feedback import FormAnalyzer
 from app.services.live_analyzer import LiveAnalyzer
-from app.services.rep_counter import make_rep_counter
+from app.services.rep_counter import CalibrationSettings, make_rep_counter
 from tests.landmark_factory import curl_front_view, rep_angles, squat_side_view
 
 
 def run_curl(drift: float, reps: int = 3):
-    counter, form = make_rep_counter("biceps_curl"), FormAnalyzer("biceps_curl")
+    counter = make_rep_counter("biceps_curl", calibration=CalibrationSettings(enabled=False))
+    form = FormAnalyzer("biceps_curl")
     frames = []
     for a in rep_angles(170, 40, reps):
         arr = ps.to_array(curl_front_view(a, elbow_drift_deg=drift if a < 140 else 0))
@@ -34,7 +35,10 @@ def test_elbow_drift_is_detected_and_lowers_score():
 
 
 def test_partial_rep_counts_as_insufficient_range():
-    counter, form = make_rep_counter("squat"), FormAnalyzer("squat")
+    # Calibration is off here: with it on, a 172->125 range would be read as this person's
+    # full range and counted as a repetition (covered in test_rep_counter.py).
+    counter = make_rep_counter("squat", calibration=CalibrationSettings(enabled=False))
+    form = FormAnalyzer("squat")
     for a in rep_angles(172, 125, 1):
         arr = ps.to_array(squat_side_view(a))
         form.update(arr, counter.update(arr))
