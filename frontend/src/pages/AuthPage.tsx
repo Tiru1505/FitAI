@@ -4,6 +4,7 @@ import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { errorMessage } from "../api/client";
 import { useAuth } from "../auth/AuthContext";
 import { CameraIcon, LogoMark, ShieldIcon, SparkIcon } from "../components/icons";
+import { quoteOfTheDay } from "../components/quotes";
 import { Alert, Button, Card, Field, Input } from "../components/ui";
 import { credentialsSchema, fieldErrors, registerSchema, type FieldErrors } from "../lib/validation";
 
@@ -60,6 +61,7 @@ export default function AuthPage({ mode }: { mode: "login" | "register" }) {
 
   const set = (key: keyof typeof values) => (e: React.ChangeEvent<HTMLInputElement>) => setValues({ ...values, [key]: e.target.value });
 
+  const quote = quoteOfTheDay();
   const highlights = [
     [<CameraIcon key="c" />, "Live form analysis", "Pose tracking runs in your browser — video never leaves this device"],
     [<SparkIcon key="s" />, "Plans that adapt", "Every change comes with the reason behind it"],
@@ -69,6 +71,14 @@ export default function AuthPage({ mode }: { mode: "login" | "register" }) {
   return (
     <div className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-10">
       {/* Soft drifting colour fields behind the form */}
+      {/* Gym photograph, dimmed well below the text so contrast stays readable */}
+      <img
+        src="/images/gym-hero.jpg" alt="" aria-hidden
+        className="pointer-events-none absolute inset-0 -z-20 h-full w-full scale-105 object-cover opacity-45"
+      />
+      {/* Scrims: strong behind the copy on the left, lighter on the right so the gym stays visible */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-espresso-950 via-espresso-950/92 to-espresso-950/70" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-t from-espresso-950 via-transparent to-espresso-950/60" />
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="animate-drift absolute -left-32 -top-32 h-[30rem] w-[30rem] rounded-full bg-plum-600/30 blur-3xl" />
         <div className="animate-drift absolute -bottom-44 -right-28 h-[32rem] w-[32rem] rounded-full bg-ember-500/20 blur-3xl" style={{ animationDelay: "-7s" }} />
@@ -87,6 +97,10 @@ export default function AuthPage({ mode }: { mode: "login" | "register" }) {
             FitAI counts your repetitions, checks your technique as you move, and rewrites next week's plan from what
             you actually did.
           </p>
+          <figure className="mt-5 max-w-md border-l-2 border-plum-400/60 pl-4">
+            <blockquote className="text-sm italic text-beige-200">"{quote.text}"</blockquote>
+            {quote.author && <figcaption className="mt-1 text-xs text-plum-300">— {quote.author}</figcaption>}
+          </figure>
           <ul className="stagger mt-7 space-y-4">
             {highlights.map(([icon, title, body]) => (
               <li key={title} className="flex gap-3">

@@ -1,10 +1,12 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { errorMessage } from "../api/client";
 import { useMe, useModelStatus, useProgressSummary, useToday } from "../api/hooks";
 import { label } from "../api/types";
 import { CalendarIcon, ChartIcon, CheckIcon, ExerciseMark, FlameIcon, SparkIcon, TargetIcon } from "../components/icons";
+import { CountUp } from "../components/CountUp";
+import { QUOTES } from "../components/quotes";
 import { Alert, Button, Card, Gauge, MiniBars, SkeletonBlock, Sparkline, Spinner, Stat, pct } from "../components/ui";
 
 const PLUM = "#c9a9ff";
@@ -35,15 +37,29 @@ export default function DashboardPage() {
 
   const overall = summary.data?.average_session_score ?? summary.data?.consistency_score ?? 0;
 
+  // Start from a quote tied to the date, then rotate slowly so the page feels alive.
+  const [quoteIndex, setQuoteIndex] = useState(() => Math.floor(Date.now() / 86_400_000) % QUOTES.length);
+  useEffect(() => {
+    const id = setInterval(() => setQuoteIndex((i) => (i + 1) % QUOTES.length), 12_000);
+    return () => clearInterval(id);
+  }, []);
+  const quote = QUOTES[quoteIndex];
+
   return (
     <div className="space-y-5">
-      {/* Hero banner — the warm panel the rest of the layout hangs from */}
-      <section className="glass relative overflow-hidden rounded-[1.75rem] px-6 py-7 animate-fade-up">
-        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-          <div className="animate-drift absolute -left-16 -top-24 h-72 w-72 rounded-full bg-plum-500/25 blur-3xl" />
-          <div className="animate-drift absolute -bottom-28 right-0 h-80 w-80 rounded-full bg-ember-500/20 blur-3xl" style={{ animationDelay: "-8s" }} />
+      {/* Hero — gym photograph behind the greeting, with a quote that rotates */}
+      <section className="group relative overflow-hidden rounded-[1.75rem] border border-beige-100/10 px-6 py-8 shadow-2xl shadow-black/40 animate-fade-up sm:px-8 sm:py-10">
+        <img
+          src="/images/gym-hero.jpg" alt="" aria-hidden
+          className="absolute inset-0 h-full w-full scale-105 object-cover object-center transition-transform duration-[6000ms] ease-out group-hover:scale-110"
+        />
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-espresso-950 via-espresso-950/88 to-espresso-950/35" />
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-espresso-950 via-transparent to-espresso-950/40" />
+        <div aria-hidden className="pointer-events-none absolute inset-0">
+          <div className="animate-drift absolute -left-16 -top-24 h-72 w-72 rounded-full bg-plum-500/30 blur-3xl" />
+          <div className="animate-drift absolute -bottom-28 right-10 h-80 w-80 rounded-full bg-ember-500/25 blur-3xl" style={{ animationDelay: "-8s" }} />
         </div>
-        <div className="flex flex-wrap items-end justify-between gap-5">
+        <div className="relative flex flex-wrap items-end justify-between gap-5">
           <div>
             <p className="text-xs uppercase tracking-[0.18em] text-plum-300">
               {new Date().toLocaleDateString(undefined, { weekday: "long", day: "numeric", month: "long" })}
@@ -58,6 +74,10 @@ export default function DashboardPage() {
                   ? `Rest day. Your next session is ${today.data.next_training_date ?? "coming up"}.`
                   : "Set up a plan to get started."}
             </p>
+            <figure key={quoteIndex} className="mt-5 max-w-lg animate-fade-up border-l-2 border-plum-400/60 pl-4">
+              <blockquote className="text-sm italic leading-relaxed text-beige-200">"{quote.text}"</blockquote>
+              {quote.author && <figcaption className="mt-1 text-xs text-plum-300">— {quote.author}</figcaption>}
+            </figure>
           </div>
           <div className="flex gap-2">
             <Link to="/session"><Button>Start workout</Button></Link>
@@ -80,22 +100,22 @@ export default function DashboardPage() {
       {summary.data && (
         <div className="stagger grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           <Stat
-            label="Sessions" value={summary.data.sessions_completed} icon={<CheckIcon />}
+            label="Sessions" value={<CountUp value={summary.data.sessions_completed} />} icon={<CheckIcon />}
             hint={summary.data.last_session_at ? `Last: ${new Date(summary.data.last_session_at).toLocaleDateString()}` : "No sessions yet"}
             chart={<MiniBars values={weekBars} color={EMBER} />}
           />
           <Stat
-            label="Total reps" value={summary.data.total_repetitions.toLocaleString()} icon={<ChartIcon />}
+            label="Total reps" value={<CountUp value={summary.data.total_repetitions} />} icon={<ChartIcon />}
             hint="Across all completed sessions" tone="ember"
             chart={<Sparkline values={repSeries.length > 1 ? repSeries : [0, 0]} stroke={EMBER} />}
           />
           <Stat
-            label="Avg. completion" value={pct(summary.data.average_completion_rate)} icon={<TargetIcon />}
+            label="Avg. completion" value={<CountUp value={(summary.data.average_completion_rate ?? 0) * 100} format={(n) => (summary.data.average_completion_rate == null ? "—" : `${Math.round(n)}%`)} />} icon={<TargetIcon />}
             hint="Planned work actually finished"
             chart={<Sparkline values={completion.length > 1 ? completion : [0, 0]} stroke={PLUM} />}
           />
           <Stat
-            label="Avg. form score" value={pct(summary.data.average_form_score)} icon={<SparkIcon />}
+            label="Avg. form score" value={<CountUp value={(summary.data.average_form_score ?? 0) * 100} format={(n) => (summary.data.average_form_score == null ? "—" : `${Math.round(n)}%`)} />} icon={<SparkIcon />}
             hint="Live camera sessions only"
             chart={<Sparkline values={formScores.length > 1 ? formScores : [0, 0]} stroke={PLUM} />}
           />
@@ -179,7 +199,22 @@ export default function DashboardPage() {
           )}
         </Card>
 
-        <Card title="Latest feedback" icon={<SparkIcon />}>
+        <section className="group relative col-span-full overflow-hidden rounded-3xl border border-beige-100/10 shadow-xl shadow-black/30 lg:col-span-1">
+          <img
+            src="/images/training.jpg" alt="People training outdoors at dawn"
+            className="h-full min-h-56 w-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-105"
+            loading="lazy"
+          />
+          <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-espresso-950 via-espresso-950/70 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 p-5">
+            <p className="text-xs uppercase tracking-[0.18em] text-ember-300">Today's reminder</p>
+            <p key={quoteIndex} className="mt-1.5 animate-fade-up text-sm font-medium leading-relaxed text-beige-100">
+              {QUOTES[(quoteIndex + 3) % QUOTES.length].text}
+            </p>
+          </div>
+        </section>
+
+        <Card title="Latest feedback" icon={<SparkIcon />} className="lg:col-span-2">
           {summary.data?.latest_feedback.length ? (
             <ul className="stagger space-y-2 text-sm text-beige-200">
               {summary.data.latest_feedback.slice(0, 5).map((f) => (
